@@ -25,16 +25,19 @@ export const categories =[
     {
         id: 1,
         img: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/024573e0-a802-4c02-be2d-2a948a65c658/jordan-dri-fit-air-short-sleeve-graphic-top-fHBkqt.png',
-        title: 'Men\'s Short-Sleeve Graphic Top'
+        title: 'Men\'s Short-Sleeve Graphic Top',
+        cate: 'men'
     },
     {
         id: 2,
-        img: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b2c46eb4-f40d-46c0-8c2d-57a8ea1a032c/jordan-sport-dna-long-sleeve-t-shirt-hlkM7d.png',
-        title: 'Men\'s Long-Sleeve T-Shirt'
+        img: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/80084754-671d-48b7-9623-16ecb50e365b/dri-fit-one-luxe-twist-standard-fit-short-sleeve-top-QMTJ66.png',
+        title: 'Nike Dri-FIT One Luxe',
+        cate: 'women'
     }, {
         id: 3,
         img: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c44faa2d-03f0-44a4-a4f0-b25863e9c826/sportswear-heritage-older-hoodie-pQGfdx.png',
-        title: 'Older Kids\' (Girls\') Full-Zip Hoodie'
+        title: 'Older Kids\' (Girls\') Full-Zip Hoodie',
+        cate: 'kids'
     },
 ]
 export const popularProducts = [

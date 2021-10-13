@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import Annountcement from '../components/Annountcement';
@@ -6,6 +6,7 @@ import Products from '../components/Products';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import {mobile} from '../responsive';
+import { useLocation } from 'react-router';
 const Container = styled.div `
     
 `
@@ -35,6 +36,17 @@ const Option = styled.option `
 
 `
 const ProductList = () => {
+    const location = useLocation();
+    const cate = location.pathname.split('/')[2];
+    const [filters, setFilters] = useState({});
+    const [sort, setSort] = useState("newest");
+    const handleFilter = (e) => {
+        const value = e.target.value;
+        setFilters({
+            ...filters,
+            [e.target.name]: value,
+        })
+    }
     return (
         <Container>
             <Annountcement />
@@ -45,16 +57,16 @@ const ProductList = () => {
                     <FilterText>
                         Lọc sản phẩm:
                     </FilterText>
-                    <Select>
-                    <Option selected>-- Màu --</Option>                        
-                    <Option>Vàng</Option>
-                    <Option>Đỏ</Option>
-                    <Option>Xanh dương</Option>
-                    <Option>Xanh lá</Option>
-                    <Option>Tím</Option>
+                    <Select name="color" onChange={handleFilter}>
+                    <Option disabled>-- Màu --</Option>                        
+                    <Option>Yellow</Option>
+                    <Option>Red</Option>
+                    <Option>Blue</Option>
+                    <Option>Black</Option>
+                    <Option>White</Option>
                     </Select>
-                    <Select>
-                    <Option disabled select>Size</Option>                        
+                    <Select name="size" onChange={handleFilter}>
+                    <Option disabled>-- Size --</Option>                        
                     <Option>XS</Option>
                     <Option>S</Option>
                     <Option>M</Option>
@@ -66,14 +78,14 @@ const ProductList = () => {
                     <FilterText>
                         Hiển thị theo:
                     </FilterText>
-                    <Select>
-                        <Option selected>Mới nhất</Option>
-                        <Option>Giá (tăng dần)</Option>
-                        <Option>Giá (giảm dần)</Option>
+                    <Select onChange={e =>setSort(e.target.value)}>
+                        <Option value="newest">-- Mới nhất --</Option>
+                        <Option value="esc">Giá (tăng dần)</Option>
+                        <Option value="desc">Giá (giảm dần)</Option>
                     </Select>
                 </Filter>
             </FilterContainer>
-            <Products />
+            <Products cate={cate} filters={filters} sort={sort}/>
             <Newsletter />
             <Footer />
         </Container>

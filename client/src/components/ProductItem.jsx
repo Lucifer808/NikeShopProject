@@ -3,16 +3,19 @@ import styled from 'styled-components'
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import { Link } from 'react-router-dom';
 const Container = styled.div `
     flex: 1;
     margin: 10px;
     min-width: 280px;
-    height: 350px;
-    display: flex;
+    max-width: 306px;
+    height: 400px;
     justify-content: center;
     align-items: center;
     background-color: #f5fbfd;
     position: relative;
+    padding-bottom: 100px;
+    border: 1px solid #ccc;
 `
 const Circle = styled.div `
     width: 200px;
@@ -22,7 +25,7 @@ const Circle = styled.div `
     position: absolute;
 `
 const Image = styled.img `
-    height: 100%;
+    height: 90%;
     width: 100%;
     object-fit: cover;
     z-index: 2;
@@ -30,7 +33,7 @@ const Image = styled.img `
 const Info = styled.div `
     opacity: 0;
     width: 100%;
-    height: 100%;
+    height: 72%;
     position: absolute;
     top: 0;
     left: 0;
@@ -60,23 +63,37 @@ const Icon = styled.div `
         cursor: pointer;
     }
 `
-
+const Review = styled.div `
+    margin: 20px 10px;
+    cursor: default;
+`
+const Name = styled.h3 `
+    margin-bottom: 20px;
+`
+const Price = styled.p `
+    font-size: 24px;
+`
 const ProductItem = ({product}) => {
     return (
         <Container>
-            <Circle />
             <Image src={product.img} />
             <Info>
                 <Icon>
                     <ShoppingBasketOutlinedIcon></ShoppingBasketOutlinedIcon>
                 </Icon>
                 <Icon>
-                    <SearchOutlinedIcon></SearchOutlinedIcon>
+                    <Link to={`/product/${product._id}`}>
+                        <SearchOutlinedIcon></SearchOutlinedIcon>
+                    </Link>
                 </Icon>
                 <Icon>
                     <FavoriteBorderOutlinedIcon></FavoriteBorderOutlinedIcon>
                 </Icon>
             </Info>
+            <Review>
+                <Name>{product.title}</Name>
+                <Price>{product.price.toLocaleString()} VND</Price>
+            </Review>
         </Container>
     )
 }

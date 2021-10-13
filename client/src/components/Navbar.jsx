@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Badge from '@mui/material/Badge';
 import {mobile} from '../responsive';
+import {Link} from 'react-router-dom';
 const Container = styled.div`
     height: 60px;
     -webkit-box-shadow: 0px 5px 16px -9px rgba(0,0,0,0.5); 
@@ -21,7 +22,7 @@ const LeftSide = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
-    ${mobile({marginLeft: "20px"})}
+    ${mobile({marginLeft: "20px"})};
 `
 const CenterSide = styled.div`
     flex: 1;
@@ -56,7 +57,8 @@ const Input = styled.input`
 const Logo = styled.h1`
     font-weight: bold;
     cursor: pointer;
-    ${mobile({fontSize: "24px"})}
+    ${mobile({fontSize: "24px"})};
+    color: black;
 `
 const MenuItem = styled.div `
     display: flex;
@@ -75,7 +77,9 @@ const Navbar = () => {
         <Container>
             <Wrapper>
                 <LeftSide>
+                    <Link to='/' style={{textDecoration: 'none'}}>
                     <Logo>NikeShop</Logo>
+                    </Link>
                 </LeftSide>
                 <CenterSide>
                     <Navigation>Nam</Navigation>

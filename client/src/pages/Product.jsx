@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import Annountcement from '../components/Annountcement';
 import Footer from '../components/Footer';
@@ -6,6 +6,8 @@ import Navbar from '../components/Navbar';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import {mobile} from '../responsive';
+import {useLocation} from 'react-router';
+import {publicReq} from '../request';
 const Container = styled.div ``
 const Wrapper = styled.div `
     padding: 50px;
@@ -61,6 +63,7 @@ const FilterColor = styled.div `
     background-color: ${props => props.color};
     margin: 0 5px;
     cursor: pointer;
+    border: 0.5px solid #ccc;
 `
 const FilterSize = styled.select `
     margin-left: 10px;
@@ -103,43 +106,63 @@ const Button = styled.button `
     ${mobile({width: "100%", marginTop: "10px"})}
 `
 const Product = () => {
+    const location = useLocation();
+    const id = location.pathname.split('/')[2];
+    const [product, setProduct] = useState({});
+    const [quantity, setQuantity] = useState(1);
+    const [color, setColor] = useState('');
+    const [size, setSize] = useState('');
+    useEffect(() =>{
+        const getProduct = async () =>{
+            try{
+                const res = await publicReq.get("/products/find/" + id);
+                setProduct(res.data);
+            }catch(err){}
+        }
+        getProduct();
+    },[id])
+    const handleQuantity = (type) =>{
+        if(type==="dec"){
+            quantity > 1 && setQuantity(quantity - 1);
+        }else{
+            setQuantity(quantity + 1);
+        }
+    }
     return (
         <Container>
             <Annountcement />
             <Navbar />
             <Wrapper>
                 <ImgContainer>
-                    <Image src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ee647b66-ea7a-46c2-b849-505080e5a189/jordan-dri-fit-air-short-sleeve-graphic-top-fHBkqt.png"/>
+                    <Image src={product.img}/>
                 </ImgContainer>
                 <InfoContainer>
-                    <Title>Jordan Dri-FIT Air</Title>
-                    <Description>The Jordan Dri-FIT Air Top is an everyday essential made from blended knit fabric with sweat-wicking technology. Wear it casually or to play or work out in.</Description>
-                    <Price>$40</Price>
+                    <Title>{product.title}</Title>
+                    <Description>{product.desc}</Description>
+                    <Price>{product.price?.toLocaleString()} VND</Price>
                     <FilterContainer>
                         <Filter>
                             <FilterTitle>Màu: </FilterTitle>
-                            <FilterColor color="black" />
-                            <FilterColor color="yellow" />
-                            <FilterColor color="red" />
+                            {product.color?.map(sc =>
+                                <FilterColor color={sc.toLowerCase()} key={sc} onClick={() => setColor(sc)}/>
+                            )}
                         </Filter>
                         <Filter>
                             <FilterTitle>Kích cỡ: </FilterTitle>
-                            <FilterSize>
-                                <FilterSizeOption>XS</FilterSizeOption>
-                                <FilterSizeOption>S</FilterSizeOption>
-                                <FilterSizeOption>M</FilterSizeOption>
-                                <FilterSizeOption>L</FilterSizeOption>
-                                <FilterSizeOption>XL</FilterSizeOption>
+                            <FilterSize onChange={(e) => setSize(e.target.value)}>
+                            {product.size?.map(sz => 
+                                <FilterSizeOption>{sz}</FilterSizeOption>
+                            )}
                             </FilterSize>
                         </Filter>
                     </FilterContainer>
                     <AddContainer>
                         <AmountContainer>
-                            <RemoveIcon></RemoveIcon>
-                            <Amount>1</Amount>
-                            <AddIcon></AddIcon>
+                            <RemoveIcon onClick={() => handleQuantity("dec")}></RemoveIcon>
+                            <Amount>{quantity}</Amount>
+                            <AddIcon onClick={() => handleQuantity("inc")}></AddIcon>
                         </AmountContainer>
-                        <Button>Thêm vào giỏ hàng</Button>
+                        <Button onClick={handleClick}>Thêm vào giỏ hàng</Button>
                     </AddContainer>
                 </InfoContainer>
             </Wrapper>
