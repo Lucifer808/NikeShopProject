@@ -5,6 +5,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Badge from '@mui/material/Badge';
 import {mobile} from '../responsive';
 import {Link} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 const Container = styled.div`
     height: 60px;
     -webkit-box-shadow: 0px 5px 16px -9px rgba(0,0,0,0.5); 
@@ -73,6 +74,7 @@ const Navigation = styled.div `
     cursor: pointer;
 `
 const Navbar = () => {
+    const quantity = useSelector( state => state.cart.quantity)
     return (
         <Container>
             <Wrapper>
@@ -94,9 +96,11 @@ const Navbar = () => {
                         <Input placeholder="Tìm kiếm..."/>
                         <SearchIcon style={{cursor: 'pointer', fontSize: '18px', color: 'gray'}}></SearchIcon>
                     </SearchContainer>
-                    <Badge badgeContent={4} color="primary">
-                        <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
-                    </Badge>
+                    <Link to='/cart'>
+                        <Badge badgeContent={quantity} color="primary">
+                            <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
+                        </Badge>
+                    </Link>
                     </MenuItem>
                 </RightSide>
             </Wrapper>

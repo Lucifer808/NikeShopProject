@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
-import {mobile} from '../responsive';
+import { login } from '../redux/apiCalls';
+import { mobile } from '../responsive';
+import { useDispatch, useSelector } from 'react-redux';
 const Container = styled.div `
     width: 100vw;
     height: 100vh;
@@ -37,6 +39,10 @@ const Button = styled.button `
     padding: 10px;
     margin: 10px 0;
     color: white;
+    &:disabled{
+        color: green;
+        cursor: not-allowed;
+    }
 `
 const SubTitle = styled.span `
     
@@ -46,17 +52,29 @@ const Link = styled.a `
     cursor: pointer;
     text-decoration: underline;
 `
+const Error = styled.span `
+    color: red;
+`
 const Login = () => {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const {isFetching, error} = useSelector((state) => state.user);
+    const dispath = useDispatch();
+    const handleClick = (e) => {
+        e.preventDefault();
+        login(dispath, {username, password});
+    }
     return (
         <Container>
             <Wrapper>
                 <Title>ĐĂNG NHẬP</Title>
                 <Form>
                     <SubTitle>Tên tài khoản:</SubTitle>
-                    <Input placeholder="Vd: duynguyen123"/>
+                    <Input placeholder="Vd: duynguyen123" onChange={e => setUsername(e.target.value)}/>
                     <SubTitle>Mật khẩu:</SubTitle>
-                    <Input placeholder="Mật khẩu"/>
-                    <Button>ĐĂNG NHẬP</Button>
+                    <Input placeholder="Mật khẩu" onChange={e => setPassword(e.target.value)} type="password"/>
+                    {error && <Error>Sai tài khoản hoặc mật khẩu</Error>}
+                    <Button onClick={handleClick} disabled={isFetching}>ĐĂNG NHẬP</Button>
                     <Link>Quên mật khẩu ?</Link>
                     <Link>Tạo tài khoản ngay.</Link>
                 </Form>
