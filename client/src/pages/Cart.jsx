@@ -151,7 +151,7 @@ const Cart = () => {
             try{
                 const res = await userReq.post('/checkout/payment', {
                     tokenId: stripeToken.id,
-                    amount: 50000
+                    amount: cart.total
                 });
                 history.push("/success", {
                     stripeData: res.data,
@@ -211,7 +211,7 @@ const Cart = () => {
                         </SummaryItem>
                         <SummaryItem>
                             <SummaryItemText>Giảm giá vận chuyển</SummaryItemText>
-                            <SummaryItemPrice>-20,000 VND</SummaryItemPrice>
+                            <SummaryItemPrice>-30,000 VND</SummaryItemPrice>
                         </SummaryItem>
                         <SummaryItem type="total">
                             <SummaryItemText type="total">Thành tiền</SummaryItemText>

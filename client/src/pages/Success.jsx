@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { userReq } from "../request";
+import { useDispatch } from 'react-redux';
+import { refeshProduct } from '../redux/reduxCart';
+
 
 const Success = () => {
   const location = useLocation();
   const data = location.state.stripeData;
-  const cart = location.state.cart;
+  const cart = useSelector(state => state.cart);
   const currentUser = useSelector((state) => state.user.currentUser);
   const [orderId, setOrderId] = useState(null);
-
+  const dispatch = useDispatch();
   useEffect(() => {
     const createOrder = async () => {
       try {
@@ -17,7 +20,9 @@ const Success = () => {
           userId: currentUser._id,
           products: cart.products.map((item) => ({
             productId: item._id,
-            quantity: item._quantity,
+            quantity: item.quantity,
+            size: item.size,
+            color: item.color
           })),
           amount: cart.total,
           address: data.billing_details.address,
@@ -27,7 +32,11 @@ const Success = () => {
     };
     data && createOrder();
   }, [cart, data, currentUser]);
-
+  const handleClick = () => {
+    dispatch(
+      refeshProduct()
+    )
+  }
   return (
     <div
       style={{
@@ -39,9 +48,9 @@ const Success = () => {
       }}
     >
       {orderId
-        ? `Order has been created successfully. Your order number is ${orderId}`
-        : `Successfull. Your order is being prepared...`}
-      <button style={{ padding: 10, marginTop: 20 }}>Go to Homepage</button>
+        ? `Đặt hàng thành công, mã đơn hàng ${orderId}. Đơn hàng sẽ được xử lý trong thời gian sớm nhất`
+        : `Thành công. Đơn hàng của bạn đang được xử lý ...`}
+      <Link to='/'><button style={{ padding: 10, marginTop: 20 }} onClick={handleClick}>Về trang chủ</button></Link>
     </div>
   );
 };

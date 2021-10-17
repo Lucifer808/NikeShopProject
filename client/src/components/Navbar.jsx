@@ -84,11 +84,21 @@ const Navbar = () => {
                     </Link>
                 </LeftSide>
                 <CenterSide>
-                    <Navigation>Nam</Navigation>
-                    <Navigation>Nữ</Navigation>
-                    <Navigation>Trẻ em</Navigation>
-                    <Navigation>Tùy chọn</Navigation>
-                    <Navigation>Giảm giá</Navigation>
+                    <Link to='/products/men' style={{textDecoration: 'none', color:'black'}}>
+                        <Navigation>Nam</Navigation>
+                    </Link>
+                    <Link to='/products/women' style={{textDecoration: 'none', color:'black'}}>
+                        <Navigation>Nữ</Navigation>
+                    </Link>
+                    <Link to='/products/kids' style={{textDecoration: 'none', color:'black'}}>
+                        <Navigation>Trẻ em</Navigation>
+                    </Link>
+                    <Link style={{textDecoration: 'none', color:'black'}}>
+                        <Navigation>Tùy chọn</Navigation>
+                    </Link>
+                    <Link style={{textDecoration: 'none', color:'black'}}>
+                        <Navigation>Giảm giá</Navigation>
+                    </Link>
                 </CenterSide>
                 <RightSide>
                     <MenuItem>
@@ -98,7 +108,7 @@ const Navbar = () => {
                     </SearchContainer>
                     <Link to='/cart'>
                         <Badge badgeContent={quantity} color="primary">
-                            <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
+                            <ShoppingCartOutlinedIcon style={{color: 'black'}}></ShoppingCartOutlinedIcon>
                         </Badge>
                     </Link>
                     </MenuItem>

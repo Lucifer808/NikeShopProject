@@ -1,5 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../redux/apiCalls';
+import { refeshProduct } from '../redux/reduxCart';
 const Container = styled.div `
     height: 30px;
     background-color: #000;
@@ -16,12 +20,23 @@ const MenuItem = styled.div `
     font-size: 12px;
 `
 const Annountcement = () => {
+    const {currentUser} = useSelector(state => state.user);
+    const cart = useSelector(state => state.cart);
+    const dispath = useDispatch();
+    const handleClick = () =>{
+        logout(dispath, currentUser);
+        dispath(refeshProduct());
+    }
     return (
         <Container>
-            <MenuItem>Đăng nhập</MenuItem>
-            <MenuItem>|</MenuItem>
-            <MenuItem>Đăng kí</MenuItem>
-            <MenuItem>|</MenuItem>
+            { currentUser && <MenuItem>Xin chào <b>{currentUser.username}</b></MenuItem>}
+            { currentUser && <MenuItem>|</MenuItem>}
+            { currentUser && <MenuItem onClick={handleClick}>Thoát</MenuItem>}
+            { currentUser && <MenuItem>|</MenuItem>}
+            { !currentUser && <Link to='/login' style={{color: '#ccc', textDecoration: 'none'}}><MenuItem>Đăng nhập</MenuItem></Link>}
+            { !currentUser && <MenuItem>|</MenuItem>}
+            { !currentUser && <Link to='/register' style={{color: '#ccc', textDecoration: 'none'}}><MenuItem>Đăng kí</MenuItem></Link>}
+            { !currentUser && <MenuItem>|</MenuItem>}
             <MenuItem>Hỗ trợ</MenuItem>
         </Container>
     )

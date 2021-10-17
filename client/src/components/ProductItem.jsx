@@ -17,13 +17,7 @@ const Container = styled.div `
     padding-bottom: 100px;
     border: 1px solid #ccc;
 `
-const Circle = styled.div `
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #000;
-    position: absolute;
-`
+
 const Image = styled.img `
     height: 90%;
     width: 100%;
@@ -83,7 +77,7 @@ const ProductItem = ({product}) => {
                 </Icon>
                 <Icon>
                     <Link to={`/product/${product._id}`}>
-                        <SearchOutlinedIcon></SearchOutlinedIcon>
+                        <SearchOutlinedIcon style={{color:'black'}}></SearchOutlinedIcon>
                     </Link>
                 </Icon>
                 <Icon>

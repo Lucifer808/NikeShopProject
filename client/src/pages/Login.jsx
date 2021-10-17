@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { login } from '../redux/apiCalls';
 import { mobile } from '../responsive';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 const Container = styled.div `
     width: 100vw;
     height: 100vh;
@@ -15,12 +16,13 @@ const Wrapper = styled.div `
     width: 40%;
     padding: 20px;
     background-color: #fff;
+    border-radius: 5px;
     ${mobile({width: "80%"})}
-
 `
 const Title = styled.h1 `
     font-size: 24px;
     margin-bottom: 5px;
+    text-align: center;
 `
 const Form = styled.form `
     display: flex;
@@ -33,12 +35,14 @@ const Input = styled.input `
     padding: 10px;
 `
 const Button = styled.button `
-    width: 40%;
+    width: 100%;
     border: none;
     background-color: teal;
     padding: 10px;
     margin: 10px 0;
     color: white;
+    border-radius: 5px;
+    cursor: pointer;
     &:disabled{
         color: green;
         cursor: not-allowed;
@@ -46,11 +50,6 @@ const Button = styled.button `
 `
 const SubTitle = styled.span `
     
-`
-const Link = styled.a `
-    margin: 5px 0;
-    cursor: pointer;
-    text-decoration: underline;
 `
 const Error = styled.span `
     color: red;
@@ -76,7 +75,7 @@ const Login = () => {
                     {error && <Error>Sai tài khoản hoặc mật khẩu</Error>}
                     <Button onClick={handleClick} disabled={isFetching}>ĐĂNG NHẬP</Button>
                     <Link>Quên mật khẩu ?</Link>
-                    <Link>Tạo tài khoản ngay.</Link>
+                    <Link to='/register'>Tạo tài khoản ngay.</Link>
                 </Form>
             </Wrapper>
         </Container>

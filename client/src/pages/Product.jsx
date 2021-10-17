@@ -114,7 +114,7 @@ const Product = () => {
     const [quantity, setQuantity] = useState(1);
     const [color, setColor] = useState('');
     const [size, setSize] = useState('');
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     useEffect(() =>{
         const getProduct = async () =>{
             try{
