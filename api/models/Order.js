@@ -6,7 +6,9 @@ const OrderSchema = new Schema({
     products: [
         {
             productId:{type: String},
-            quantity: {type: Number, default: 1}
+            quantity: {type: Number, default: 1},
+            size: {type: String, default: 'S'},
+            color: {type: String}
         }
     ],
     amount: {type: Number, required: true},
