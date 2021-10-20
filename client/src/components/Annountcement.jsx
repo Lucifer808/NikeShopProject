@@ -29,7 +29,7 @@ const Annountcement = () => {
     }
     return (
         <Container>
-            { currentUser && <MenuItem>Xin chào <b>{currentUser.username}</b></MenuItem>}
+            { currentUser && <MenuItem>Xin chào <b>{currentUser.name}</b></MenuItem>}
             { currentUser && <MenuItem>|</MenuItem>}
             { currentUser && <MenuItem onClick={handleClick}>Thoát</MenuItem>}
             { currentUser && <MenuItem>|</MenuItem>}

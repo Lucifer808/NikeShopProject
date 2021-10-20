@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import {mobile} from '../responsive';
 import {publicReq} from '../request';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 const Container = styled.div `
     width: 100vw;
     height: 100vh;
@@ -49,37 +49,35 @@ const Button = styled.button `
 `
 const SubTitle = styled.span `
 `
-const loginTitle = styled.span `
+const LoginTitle = styled.span `
     
 `
 const Register = () => {
+    const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const handleClick = (e) =>{
-        e.preventDefault()
+        e.preventDefault();
+        const registerReq = async () => {
+            try{
+                 return await publicReq.post('/auth/register',{
+                         name,
+                         username,
+                         email,
+                         password
+                 })
+            }catch{}
+        }
+        registerReq();
     }
-    useEffect(() =>{
-       const registerReq = async () => {
-           try{
-                const res = await publicReq.post('/auth/register',{
-                    username: username,
-                    email: email,
-                    password: password
-                })
-           }catch{}
-       }
-       handleClick && registerReq();
-    },[handleClick]);
     return (
         <Container>
             <Wrapper>
                 <Title>ĐĂNG KÝ TÀI KHOẢN</Title>
                 <Form>
                     <SubTitle>Tên:</SubTitle>
-                    <Input placeholder="Vd: Duy"/>
-                    <SubTitle>Họ:</SubTitle>
-                    <Input placeholder="Vd: Nguyễn"/>
+                    <Input placeholder="Vd: Duy" onChange={e => setName(e.target.value)}/>
                     <SubTitle>Tên tài khoản:</SubTitle>
                     <Input placeholder="Vd: duynguyen123" onChange={e => setUsername(e.target.value)}/>
                     <SubTitle>Email:</SubTitle>
@@ -91,9 +89,9 @@ const Register = () => {
                     <Agreement>
                         Tôi đã đọc kĩ <b> điều khoản sử dụng </b> và đồng ý với tất cả các điều khoản.
                     </Agreement>
-                    <loginTitle style={{fontSize:'12px', paddingRight:'50%', marginBottom: '20px'}}>
+                    <LoginTitle style={{fontSize:'12px', paddingRight:'50%', marginBottom: '20px'}}>
                         Bạn đã có tài khoản ? <Link to='/login' style={{fontSize:'16px'}}> Đăng nhập ngay</Link>
-                    </loginTitle>
+                    </LoginTitle>
                     <Button onClick={handleClick}>ĐĂNG KÝ</Button>
                 </Form>
             </Wrapper>
