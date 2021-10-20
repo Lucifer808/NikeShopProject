@@ -1,0 +1,35 @@
+.login{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url("https://static.nike.com/a/images/f_auto/dpr_1.0/w_1237,c_limit/8b029647-53da-43ad-9234-70807cd676e4/nike-just-do-it.jpg") center;
+}
+.loginWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.loginInput{
+    flex: 1;
+    min-width: 90%;
+    margin: 0px 10px 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.loginBtn{width: 100%;
+    border: none;
+    background-color: teal;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
