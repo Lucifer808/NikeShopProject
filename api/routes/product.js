@@ -3,7 +3,7 @@ const router = express.Router();
 const {verifyToken, authorization, authorizationAdmin} = require('./verifyToken');
 const Product = require('../models/Product');
 
-// Create product
+// Create Product
 router.post('/', authorizationAdmin, async (req, res) => {
     const newProduct = new Product(req.body);
     try{
@@ -15,7 +15,7 @@ router.post('/', authorizationAdmin, async (req, res) => {
 })
 
 
-// Update User
+// Update Product
 router.put('/:id', authorizationAdmin , async (req, res) =>{
     try{
         const updatedProduct = await Product.findByIdAndUpdate(req.params.id, {
