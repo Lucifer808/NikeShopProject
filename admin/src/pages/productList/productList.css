@@ -25,3 +25,6 @@
     color: red;
     cursor: pointer;
 }
+.productAddButton{
+    margin-bottom: 10px;
+}

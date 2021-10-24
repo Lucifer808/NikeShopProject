@@ -10,6 +10,7 @@ const Login = () => {
     const handleClick = (e) =>{
         e.preventDefault();
         login(dispath, {username, password});
+        window.location.reload();
     }
     let admin = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser?.isAdmin || null;
     return (
@@ -31,7 +32,6 @@ const Login = () => {
                     onChange={e=>setPassword(e.target.value)}
                     className='loginInput'
                     ></input>
-                    { !admin && <span>Bạn không có quyền truy cập</span> }
                     <button onClick={handleClick} className='loginBtn'>Đăng nhập</button>
                 </div>
             </div>

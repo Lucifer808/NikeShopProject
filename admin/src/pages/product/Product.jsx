@@ -1,43 +1,143 @@
-import React from 'react'
-import './product.css'
-import {Link} from 'react-router-dom'
-import Chart from '../../components/chart/Chart'
-import { productData } from '../../dummyData'
+import React, { useState, useMemo, useEffect } from 'react';
+import './product.css';
+import TextareaAutosize from '@mui/material/TextareaAutosize';
+import { Link, useLocation } from 'react-router-dom';
+import Chart from '../../components/chart/Chart';
 import PublishIcon from '@mui/icons-material/Publish';
+import { useSelector, useDispatch } from 'react-redux';
+import { userReq } from '../../request';
+import app from '../../firebase';
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { updateProduct } from '../../redux/apiCalls';
 function Product() {
+    const [inputs,setInputs]= useState({});
+    const [file,setFile] = useState(null);
+    const [cate,setCate] = useState([]);
+    const [color,setColor] = useState([]);
+    const [size,setSize] = useState([]);
+    const dispatch = useDispatch();
+    const location = useLocation();
+    const productId = location.pathname.split('/')[2];
+    const [pStats,setPStats] = useState([]);
+    const MONTHS = useMemo(
+        ()=>[
+        "Tháng 1",
+        "Tháng 2",
+        "Tháng 3",
+        "Tháng 4",
+        "Tháng 5",
+        "Tháng 6",
+        "Tháng 7",
+        "Tháng 8",
+        "Tháng 9",
+        "Tháng 10",
+        "Tháng 11",
+        "Tháng 12",
+    ],[])
+    const product = useSelector((state) => 
+        state.product.products.find((product) => product._id === productId));
+        useEffect(() => {
+            const getStats = async () => {
+              try {
+                const res = await userReq.get("orders/income?pid=" + productId);
+                const list = res.data.sort((a,b)=>{
+                    return a._id - b._id
+                })
+                list.map((item) =>
+                  setPStats((prev) => [
+                    ...prev,
+                    { name: MONTHS[item._id - 1], Sales: item.total },
+                  ])
+                );
+              }catch(err){
+                console.log(err);
+              }
+            };
+            getStats();
+        }, [productId, MONTHS]);
+    const handleChange = (e) =>{
+        setInputs(prev => {
+            return {...prev, [e.target.name]: e.target.value}
+        })
+    }
+    const handleCate = (e) => {
+        setCate(e.target.value.split(','));
+    }
+    const handleColor = (e) => {
+        setColor(e.target.value.split(','));
+    }
+    const handleSize = (e) => {
+        setSize(e.target.value.split(','));
+    }
+    const handleUpdate = (e) => {
+        e.preventDefault();
+        const fileName = new Date().getTime() + file.name;
+        const storage = getStorage(app);
+        const storageRef = ref(storage, fileName);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+        // Register three observers:
+        // 1. 'state_changed' observer, called any time the state changes
+        // 2. Error observer, called on failure
+        // 3. Completion observer, called on successful completion
+        uploadTask.on('state_changed', 
+        (snapshot) => {
+            // Observe state change events such as progress, pause, and resume
+            // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log('Upload is ' + progress + '% done');
+            switch (snapshot.state) {
+            case 'paused':
+                console.log('Upload is paused');
+                break;
+            case 'running':
+                console.log('Upload is running');
+                break;
+            default:
+            }
+        }, 
+        (error) => {
+            // Handle unsuccessful uploads
+        }, 
+        () => {
+            // Handle successful uploads on complete
+            // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+            const productUpdated = {...inputs, img: downloadURL, categories: cate, size: size, color: color};
+            updateProduct(productId,productUpdated, dispatch);
+            window.location.replace('http://localhost:3000/products');
+            });
+        }
+        );
+    }
     return (
         <div className="product">
             <div className="productTitleContainer">
-                <h1 className="productTitle">Product</h1>
+                <h1 className="productTitle">Sản phẩm</h1>
                 <Link to="/newproduct">
-                    <button className="productAddButton">Create</button>
+                    <button className="productAddButton">Thêm mới</button>
                 </Link>
             </div>
             <div className="productTop">
                 <div className="productTopLeft">
-                    <Chart data={productData} dataKey="Sales" title="Sales Performance"/>
+                    <Chart data={pStats} dataKey="Sales" title="Doanh thu sản phẩm"/>
                 </div>
                 <div className="productTopRight">
                     <div className="productInfoTop">
-                        <img src="data:image/jpeg;base64,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" alt="" className="productInfoImg" />
-                        <soan className="productName">Laptop Dell</soan>
+                        <img src={product.img} alt="" className="productInfoImg" />
+                        <span className="productName">{product.title}</span>
                     </div>
                     <div className="productInfoBottom">
                         <div className="productInfoItem">
-                            <span className="productInfoKey">Id: </span>
-                            <span className="productInfoKey">123</span>
+                            <span className="productInfoKey">Mã sản phẩm: </span>
+                            <span className="productInfoKey">{product._id}</span>
                         </div>
                         <div className="productInfoItem">
-                            <span className="productInfoKey">Sales: </span>
+                            <span className="productInfoKey">Số lượng đã bán: </span>
                             <span className="productInfoKey">1236</span>
                         </div>
                         <div className="productInfoItem">
-                            <span className="productInfoKey">Active: </span>
-                            <span className="productInfoKey">Yes</span>
-                        </div>
-                        <div className="productInfoItem">
-                            <span className="productInfoKey">In Stock: </span>
-                            <span className="productInfoKey">No</span>
+                            <span className="productInfoKey">Tồn kho: </span>
+                            <span className="productInfoKey">{product.inStock === true ? 'Còn hàng' : 'Hết hàng'}</span>
                         </div>
                     </div>
                 </div>
@@ -45,28 +145,70 @@ function Product() {
             <div className="productBottom">
                 <form action="" className="productForm">
                     <div className="productFormLeft">
-                        <label htmlFor="">Product Name:</label>
-                        <input type="text" placeholder="Dell"/>
-                        <label htmlFor="">In Sotck:</label>
-                        <select name="inStock" id="idStock">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                        <label htmlFor="">Active:</label>
-                        <select name="active" id="active">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                        <label>Tên sản phẩm:</label>
+                        <input 
+                            type="text" 
+                            name="title" 
+                            placeholder={product.title}
+                            onChange={handleChange}
+                        />
+                        <label>Mô tả sản phẩm:</label>
+                        <TextareaAutosize
+                            name="desc"
+                            aria-label="minimum height"
+                            minRows={3}
+                            placeholder={product.desc}
+                            style={{ width: 250, marginBottom: '10px' }}
+                            onChange={handleChange}
+                        />
+                        <label>Giá sản phẩm:</label>
+                        <input 
+                            type="number" 
+                            name="price" 
+                            placeholder={product.price}
+                            onChange={handleChange}
+                        />
+                        <label>Màu sản phẩm:</label>
+                        <input 
+                            type="text" 
+                            name="color" 
+                            placeholder={product.color}
+                            onChange={handleColor}
+                        />
+                        <label>Kích cỡ sản phẩm:</label>
+                        <input 
+                            type="text" 
+                            name="size" 
+                            placeholder={product.size}
+                            onChange={handleSize}
+                        />
+                        <label>Phân loại sản phẩm:</label>
+                        <input 
+                            type="text" 
+                            name="cate" 
+                            placeholder={product.categories}
+                            onChange={handleCate}
+                        />
+                        <label>Tồn kho:</label>
+                        <select name="inStock" id="idStock" onChange={handleChange}>
+                            <option value="true">Còn hàng</option>
+                            <option value="false">Hết hàng</option>
                         </select>
                     </div>
                     <div className="productFormRight">
                         <div className="productUpload">
-                            <img className="productUploadImg" src="data:image/jpeg;base64,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" alt="" />
-                        <label for="file">
+                            <img className="productUploadImg" src={product.img} alt="" />
+                        <label htmlFor="file">
                             <PublishIcon></PublishIcon>
                         </label>
-                        <input type="file" id="file" style={{display: "none"}}/>
+                        <input 
+                            type="file" 
+                            id="file" 
+                            style={{display: "none"}}
+                            onChange={(e)=>setFile(e.target.files[0])}
+                        />
                         </div>
-                    <button className="productButton">Update</button>
+                    <button className="productButton" onClick={handleUpdate}>Cập nhật</button>
                     </div>
                 </form>
             </div>

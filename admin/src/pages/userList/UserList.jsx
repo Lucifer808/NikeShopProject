@@ -1,34 +1,29 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-import {userRows} from "../../dummyData";
-import {Link} from "react-router-dom";
+import { userRows } from "../../dummyData";
+import { Link } from "react-router-dom";
+import { getUsersData, deleteUsersData } from '../../redux/apiCalls';
+import { useDispatch, useSelector } from 'react-redux';
 import "./userList.css";
 function UserList() {
-    const [data, setData] = useState(userRows);
+    const dispatch = useDispatch();
+    const users = useSelector((state) => state.userdata.users);
+    useEffect(() =>{
+        getUsersData(dispatch);
+    }, [dispatch]);
     const handleDelete = (id) => {
-       setData(data.filter(item => item.id !== id))
+        deleteUsersData(id, dispatch);
     }
     const columns = [
-        { field: "id", headerName: "ID", width: 70 },
-        { field: "user", headerName: "User", width: 220 , renderCell: (params) =>{
-            return (
-                <div className="userListUser">
-                    <img className="userListImg" src={params.row.avatar} alt="" />
-                    {params.row.username}
-                </div>
-            );
-        }},
-        { field: "email", headerName: "Email Address", width: 200 },
+        { field: "_id", headerName: "ID", width: 200 },
+        { field: "name", headerName: "Tên", width: 160 },
+        { field: "username", headerName: "Tên đăng nhập", width: 160},
+        { field: "email", headerName: "Tài khoản email", width: 200 },
         {
-        field: "status",
-        headerName: "Status",
+        field: "isAdmin",
+        headerName: "Admin",
         width: 120,
-        },
-        {
-            field: "transaction",
-            headerName: "Transaction Volume",
-            width: 160,
         },
         {
             field: "action",
@@ -37,10 +32,10 @@ function UserList() {
             renderCell: (params) =>{
                 return (
                     <>
-                    <Link to={"/user/" + params.row.id}>
+                    <Link to={"/user/" + params.row._id}>
                     <button className="userListEdit">Edit</button>
                     </Link>
-                    <DeleteOutlineIcon className="userListDelete" onClick={()=>handleDelete(params.row.id)}></DeleteOutlineIcon>
+                    <DeleteOutlineIcon className="userListDelete" onClick={()=>handleDelete(params.row._id)}></DeleteOutlineIcon>
                     </>
                 )
             }
@@ -49,10 +44,11 @@ function UserList() {
     return (
         <div className="userList">
         <DataGrid
-            rows={data} disableSelectionOnClick
+            rows={users} disableSelectionOnClick
             columns={columns}
             pageSize={8}
             rowsPerPageOptions={[5]}
+            getRowId={row => row._id}
             checkboxSelection
         />
         </div>

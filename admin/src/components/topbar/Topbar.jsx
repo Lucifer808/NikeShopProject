@@ -11,6 +11,8 @@ function Topbar() {
     const dispath = useDispatch();
     const handleClick = () =>{
         logout(dispath, currentUser);
+        window.location.reload();
+        window.location.href='/login';
     }
     return (
         <div className="topbar">
@@ -33,9 +35,11 @@ function Topbar() {
                         <SettingsIcon></SettingsIcon>
                     </div>
                     <div className="topbarIconContainer">
+                        <img src="https://pm1.narvii.com/6392/431aabe939b1037c7ba1970062a76b14ef607eed_hq.jpg" alt="" className="topAvatar" />
+                    </div>
+                    <div className="topbarIconContainer">
                         <span onClick={handleClick}>Thoát</span>
                     </div>
-                    <img src="https://pm1.narvii.com/6392/431aabe939b1037c7ba1970062a76b14ef607eed_hq.jpg" alt="" className="topAvatar" />
                 </div>
             </div>
         </div>

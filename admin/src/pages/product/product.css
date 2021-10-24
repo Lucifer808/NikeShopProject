@@ -17,6 +17,7 @@
     background-color: rgb(0, 128, 68);
     border-radius: 10px;
     color: white;
+    cursor: pointer;
 }
 .productTop{
     display: flex;
@@ -25,9 +26,10 @@
 .productTopRight{
     flex: 1;
 }
-/* .productTopLeft{
-    width: 200px;
-} */
+.productTopLeft{
+    width: 100%;
+    height: 100%;
+}
 .productTopRight{
     padding: 20px;
     margin: 20px;
@@ -75,21 +77,22 @@
 }
 .productFormLeft>label{
     margin-bottom: 10px;
-    color: gray;
+    color: #333;
 }
 .productFormLeft>input{
     margin-bottom: 10px;
     border: none;
     padding: 5px;
     border-bottom: 1px solid gray;
-    outline: none
+    outline: none;
+    width: 250px;
 }
 .productFormLeft>select{
     margin-bottom: 10px;
 }
 .productUploadImg{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 10px;
     object-fit: cover;
     margin-right: 20px;
