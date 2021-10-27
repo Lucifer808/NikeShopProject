@@ -16,7 +16,7 @@
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: 600;
-    column: rgb(151, 150, 150);
+    color: #333;
 }
 .newUserItem>input{
     height: 20px;
@@ -37,13 +37,18 @@
     border-radius: 5px;
 }
 .newUserButton{
-    width: 200px;
+    width: 400px;
     border: none;
     background-color: darkblue;
     color: white;
     font-weight: 600;
-    padding: 7px 10px;
+    padding: 10px;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: -40px;
+    margin-left: 420px;
+}
+.newUserIsAdmin{
+    padding: 10px;
+    border-radius: 5px;
 }

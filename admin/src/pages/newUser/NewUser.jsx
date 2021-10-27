@@ -1,53 +1,111 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addUserData } from '../../redux/apiCalls';
 import './newUser.css'
 function NewUser() {
+    const [inputs, setInputs] = useState({});
+    const dispatch = useDispatch();
+    const handleChange = (e) => {
+        setInputs(prev => {
+            return {...prev, [e.target.name]: e.target.value}
+        })
+    }
+    const handleClick = (e) => {
+        e.preventDefault();
+        addUserData(inputs,dispatch);
+        window.location.replace('http://localhost:3000/users');
+    }
     return (
         <div className="newUser">
-            <h1 className="newUserTitle">New User</h1>
+            <h1 className="newUserTitle">Thêm tài khoản mới</h1>
             <form action="" className="newUserForm">
                 <div className="newUserItem">
-                    <label>Username:</label>
-                    <input type="text" placeholder="Jon"/>
+                    <label>Tên đăng nhập:</label>
+                    <input
+                        name="username" 
+                        type="text" 
+                        placeholder="Vd: duynguyen123"
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <div className="newUserItem">
-                    <label>Full Name:</label>
-                    <input type="text" placeholder="Jon Smith"/>
+                    <label>Họ Tên:</label>
+                    <input
+                        name="name" 
+                        type="text" 
+                        placeholder="Vd: Duy Nguyen"
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <div className="newUserItem">
                     <label>Email:</label>
-                    <input type="text" placeholder="Jon@gmail.com"/>
+                    <input
+                        name="email" 
+                        type="text" 
+                        placeholder="Vd: Duy@gmail.com"
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <div className="newUserItem">
-                    <label>Password:</label>
-                    <input type="text" placeholder=""/>
+                    <label>Mật khẩu:</label>
+                    <input
+                        name="password" 
+                        type="password" 
+                        placeholder="Nhập mật khẩu..."
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <div className="newUserItem">
-                    <label>Phone:</label>
-                    <input type="text" placeholder="094638941"/>
+                    <label>Nhập lại mật khẩu:</label>
+                    <input 
+                        type="password" 
+                        placeholder="Nhập lại mật khẩu..."
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <div className="newUserItem">
-                    <label>Address:</label>
-                    <input type="text" placeholder="Can Tho City"/>
+                    <label>Số điện thoại:</label>
+                    <input
+                        name="phone" 
+                        type="text" 
+                        placeholder="Vd: 094638941"
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <div className="newUserItem">
-                    <label>Gender:</label>
-                    <div className="newUserGender">
-                        <input type="radio" name="gender" id="male" value="male"/>
-                        <label for="male">Male</label>
-                        <input type="radio" name="gender" id="female" value="female"/>
-                        <label for="female">Female</label>
-                        <input type="radio" name="gender" id="other" value="other"/>
-                        <label for="other">Other</label>
-                    </div>
+                    <label>Địa chỉ:</label>
+                    <input
+                        name="address" 
+                        type="text" 
+                        placeholder="Vd: Can Tho City"
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <div className="newUserItem">
-                    <label>Active</label>
-                    <select name="active" id="active" className="newUserSelect">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
+                    <label>Ngày sinh:</label>
+                    <input
+                        name="dayOfBirth" 
+                        type="text" 
+                        placeholder="Vd: 01/12/2000"
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="newUserItem">
+                    <label>Quyền hạn:</label>
+                    <select className="newUserIsAdmin" onChange={handleChange} name="isAdmin">
+                        <option value="false">Người dùng</option>
+                        <option value="true">Quản trị viên</option>
                     </select>
                 </div>
-                <button className="newUserButton">Create</button>
+                <button className="newUserButton" onClick={handleClick}>Tạo tài khoản</button>
             </form>
         </div>
     )

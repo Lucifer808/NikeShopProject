@@ -71,7 +71,7 @@ function Product() {
     }
     const handleUpdate = (e) => {
         e.preventDefault();
-        const fileName = new Date().getTime() + file.name;
+        const fileName = new Date().getTime() + file?.name;
         const storage = getStorage(app);
         const storageRef = ref(storage, fileName);
         const uploadTask = uploadBytesResumable(storageRef, file);
@@ -109,6 +109,16 @@ function Product() {
         }
         );
     }
+    const handleFile = (e) => {
+        const img=e.target.files[0];
+        img.preview = URL.createObjectURL(img);
+        setFile(img);
+    }
+    useEffect(() =>{
+        return () =>{
+            file && URL.revokeObjectURL(file.review);
+        }
+    },[file])
     return (
         <div className="product">
             <div className="productTitleContainer">
@@ -197,7 +207,7 @@ function Product() {
                     </div>
                     <div className="productFormRight">
                         <div className="productUpload">
-                            <img className="productUploadImg" src={product.img} alt="" />
+                            <img className="productUploadImg" src={file ? file.preview : product.img} alt="" />
                         <label htmlFor="file">
                             <PublishIcon></PublishIcon>
                         </label>
@@ -205,7 +215,7 @@ function Product() {
                             type="file" 
                             id="file" 
                             style={{display: "none"}}
-                            onChange={(e)=>setFile(e.target.files[0])}
+                            onChange={handleFile}
                         />
                         </div>
                     <button className="productButton" onClick={handleUpdate}>Cập nhật</button>

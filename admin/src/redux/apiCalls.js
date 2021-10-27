@@ -19,6 +19,13 @@ import {
     deleteUserStart, 
     deleteUserSuccess, 
     deleteUserFailure,
+    updateUserStart,
+    updateUserSuccess,
+    updateUserFailure,
+    addUserStart,
+    addUserSuccess,
+    addUserFailure
+
 } from './reduxUserData';
 import { publicReq, userReq } from '../request';
 
@@ -89,5 +96,23 @@ export const deleteUsersData = async (id, dispatch) =>{
         dispatch(deleteUserSuccess(id));
     }catch(err){
         dispatch(deleteUserFailure());
+    }
+}
+export const updateUserData = async (id, user, dispatch) =>{
+    dispatch(updateUserStart());
+    try{
+        const res = await userReq.put(`/users/${id}`, user);
+        dispatch(updateUserSuccess(id, user));
+    }catch(err){
+        dispatch(updateUserFailure());
+    }
+}
+export const addUserData = async (user, dispatch) =>{
+    dispatch(addUserStart());
+    try{
+        const res = await userReq.post(`/auth/register`,user)
+        dispatch(addUserSuccess(res.data));
+    }catch(err){
+        dispatch(addUserFailure());
     }
 }

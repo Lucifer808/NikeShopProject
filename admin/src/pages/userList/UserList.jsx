@@ -43,6 +43,9 @@ function UserList() {
     ];
     return (
         <div className="userList">
+        <Link to="/newUser">
+                    <button className="productAddButton">Thêm mới</button>
+        </Link>
         <DataGrid
             rows={users} disableSelectionOnClick
             columns={columns}

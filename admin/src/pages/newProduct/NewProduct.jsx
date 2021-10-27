@@ -62,6 +62,7 @@ function NewProduct() {
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             const product = {...inputs, img: downloadURL, categories: cate, size: size, color: color};
             addProduct(product, dispatch);
+            window.location.replace('http://localhost:3000/products');
             });
         }
         );

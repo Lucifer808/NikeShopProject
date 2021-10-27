@@ -35,34 +35,34 @@ const usersDataSlice = createSlice({
             state.isFetching=false;
             state.error=true;
         },
-        //  // Update User
-        // updateUserStart: (state) =>{
-        //     state.isFetching=true;
-        //     state.error=false;
-        // },
-        // updateUserSuccess: (state, action) =>{
-        //     state.isFetching=false;
-        //     state.Users[
-        //         state.Users.findIndex((item) => item._id === action.payload.id)
-        //     ] = action.payload.User;
-        // },
-        // updateUserFailure: (state) =>{
-        //     state.isFetching=false;
-        //     state.error=true;
-        // },
-        //  // Add User
-        // addUserStart: (state) =>{
-        //     state.isFetching=true;
-        //     state.error=false;
-        // },
-        // addUserSuccess: (state, action) =>{
-        //     state.isFetching=false;
-        //     state.Users.push(action.payload)
-        // },
-        // addUserFailure: (state) =>{
-        //     state.isFetching=false;
-        //     state.error=true;
-        // }
+         // Update User
+        updateUserStart: (state) =>{
+            state.isFetching=true;
+            state.error=false;
+        },
+        updateUserSuccess: (state, action) =>{
+            state.isFetching=false;
+            state.users[
+                state.users.findIndex((item) => item._id === action.payload.id)
+            ] = action.payload.User;
+        },
+        updateUserFailure: (state) =>{
+            state.isFetching=false;
+            state.error=true;
+        },
+         // Add User
+        addUserStart: (state) =>{
+            state.isFetching=true;
+            state.error=false;
+        },
+        addUserSuccess: (state, action) =>{
+            state.isFetching=false;
+            state.users.push(action.payload)
+        },
+        addUserFailure: (state) =>{
+            state.isFetching=false;
+            state.error=true;
+        }
     }
 })
 export const {
@@ -72,11 +72,11 @@ export const {
     deleteUserStart, 
     deleteUserSuccess, 
     deleteUserFailure,
-    // updateUserStart,
-    // updateUserSuccess,
-    // updateUserFailure,
-    // addUserStart,
-    // addUserSuccess,
-    // addUserFailure
+    updateUserStart,
+    updateUserSuccess,
+    updateUserFailure,
+    addUserStart,
+    addUserSuccess,
+    addUserFailure
 } = usersDataSlice.actions;
 export default usersDataSlice.reducer; 
