@@ -11,6 +11,10 @@ router.post('/register', async (req, res) => {
         username: req.body.username,
         email: req.body.email,
         password: CryptoJS.AES.encrypt(req.body.password, process.env.AUTH_PWD).toString(),
+        dayOfBirth: req.body.dayOfBirth,
+        phone: req.body.phone,
+        address: req.body.address,
+        isAdmin: req.body.isAdmin,
     });
     
     try{
