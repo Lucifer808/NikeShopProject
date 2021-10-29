@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { useSelector } from 'react-redux';
 import StripeCheckout from 'react-stripe-checkout';
 import { userReq } from '../request';
@@ -53,6 +54,8 @@ const Info = styled.div `
 const Product = styled.div `
     display: flex;
     justify-content: space-between;
+    border-top: 0.5px solid #ccc;
+    border-bottom: 0.5px solid #ccc;
 `
 const ProductDetail = styled.div `
     flex: 2;
@@ -140,6 +143,7 @@ const Button = styled.button `
     cursor: pointer;
 `
 const Cart = () => {
+    const [productId, setProductId] = useState();
     const cart = useSelector(state => state.cart);
     const [stripeToken, setStripeToken] = useState(null);
     const history = useHistory();
@@ -164,6 +168,10 @@ const Cart = () => {
     const handleBack = () => {
         window.history.back();
     }
+    const handleRemove = () => {
+
+    }
+    console.log(productId)
     return (
         <Container>
             <Annountcement />
@@ -173,10 +181,11 @@ const Cart = () => {
                 <TopSide>
                     <TopButton onClick={handleBack}>Tiếp tục mua hàng</TopButton>
                     <TopTexts>
-                        <TopText>Sản phẩm trong giỏ hàng (0)</TopText>
+                    {cart.products.map(product => (
+                        <TopText>Sản phẩm trong giỏ hàng ({product.quantity})</TopText>
+                    ))}
                         <TopText>Sản phẩm yêu thích (0)</TopText>
                     </TopTexts>
-                    <TopButton type="filled">Thanh toán</TopButton>
                 </TopSide>
                 <BottomSide>
                     <Info>
@@ -193,12 +202,13 @@ const Cart = () => {
                             </ProductDetail>
                             <PriceDetail>
                                 <ProductAmountContainer>
-                                    <RemoveIcon></RemoveIcon>
+                                    <RemoveIcon style={{cursor: 'pointer'}}></RemoveIcon>
                                     <ProductAmount>{product.quantity}</ProductAmount>
-                                    <AddIcon></AddIcon>
+                                    <AddIcon style={{cursor: 'pointer'}}></AddIcon>
                                 </ProductAmountContainer>
                                 <ProductPrice>{(product.price*product.quantity).toLocaleString()} VND</ProductPrice>
                             </PriceDetail>
+                                <HighlightOffIcon style={{margin: '5px 5px', cursor: 'pointer'}} onClick={()=>setProductId(product._id)}></HighlightOffIcon>
                         </Product>))}
                         <Hr></Hr>
                     </Info>

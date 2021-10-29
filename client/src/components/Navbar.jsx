@@ -6,6 +6,7 @@ import Badge from '@mui/material/Badge';
 import {mobile} from '../responsive';
 import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 const Container = styled.div`
     height: 60px;
     -webkit-box-shadow: 0px 5px 16px -9px rgba(0,0,0,0.5); 
@@ -97,10 +98,10 @@ const Navbar = () => {
                     <Link to='/products/kids' style={{textDecoration: 'none', color:'black'}}>
                         <Navigation>Trẻ em</Navigation>
                     </Link>
-                    <Link style={{textDecoration: 'none', color:'black'}}>
+                    <Link to='/products/options' style={{textDecoration: 'none', color:'black'}}>
                         <Navigation>Tùy chọn</Navigation>
                     </Link>
-                    <Link style={{textDecoration: 'none', color:'black'}}>
+                    <Link to='/products/sale' style={{textDecoration: 'none', color:'black'}}>
                         <Navigation>Giảm giá</Navigation>
                     </Link>
                 </CenterSide>
@@ -111,8 +112,13 @@ const Navbar = () => {
                         <SearchBtn type="submit"><SearchIcon style={{cursor: 'pointer', fontSize: '18px', color: 'gray'}}></SearchIcon></SearchBtn>
                     </SearchContainer>
                     <Link to='/cart'>
-                        <Badge badgeContent={quantity} color="primary">
+                        <Badge badgeContent={quantity ? quantity : '0'} color="primary">
                             <ShoppingCartOutlinedIcon style={{color: 'black'}}></ShoppingCartOutlinedIcon>
+                        </Badge>
+                    </Link>
+                    <Link to='/wishlist'>
+                        <Badge badgeContent='0' color="primary">
+                            <FavoriteBorderIcon style={{color: 'black', marginLeft:'10px'}}></FavoriteBorderIcon>
                         </Badge>
                     </Link>
                     </MenuItem>

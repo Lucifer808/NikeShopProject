@@ -29,6 +29,7 @@ const FilterText = styled.span `
 const Select = styled.select `
     margin-left: 20px;
     padding: 5px;
+    border-radius: 5px;
     ${mobile({margin: "10px 5px"})}
 
 `
@@ -59,11 +60,11 @@ const ProductList = () => {
                     </FilterText>
                     <Select name="color" onChange={handleFilter}>
                     <Option selected disabled>-- Màu --</Option>                        
-                    <Option>Yellow</Option>
-                    <Option>Red</Option>
-                    <Option>Blue</Option>
-                    <Option>Black</Option>
-                    <Option>White</Option>
+                    <Option value="Yellow">Vàng</Option>
+                    <Option value="Red">Đỏ</Option>
+                    <Option value="Blue">Xanh dương</Option>
+                    <Option value="Black">Đen</Option>
+                    <Option value="White">Trắng</Option>
                     </Select>
                     <Select name="size" onChange={handleFilter}>
                     <Option selected disabled>-- Size --</Option>                        
@@ -79,7 +80,8 @@ const ProductList = () => {
                         Hiển thị theo:
                     </FilterText>
                     <Select onChange={e =>setSort(e.target.value)}>
-                        <Option value="newest">-- Mới nhất --</Option>
+                        <Option selected disabled>-- Chọn --</Option>
+                        <Option value="newest">Mới nhất</Option>
                         <Option value="esc">Giá (tăng dần)</Option>
                         <Option value="desc">Giá (giảm dần)</Option>
                     </Select>

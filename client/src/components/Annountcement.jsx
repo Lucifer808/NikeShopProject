@@ -31,7 +31,7 @@ const Annountcement = () => {
         <Container>
             { currentUser && <MenuItem>Xin chào <b>{currentUser.name}</b></MenuItem>}
             { currentUser && <MenuItem>|</MenuItem>}
-            { currentUser && <MenuItem onClick={handleClick}>Thoát</MenuItem>}
+            { currentUser && <MenuItem onClick={handleClick}>Đăng xuất</MenuItem>}
             { currentUser && <MenuItem>|</MenuItem>}
             { !currentUser && <Link to='/login' style={{color: '#ccc', textDecoration: 'none'}}><MenuItem>Đăng nhập</MenuItem></Link>}
             { !currentUser && <MenuItem>|</MenuItem>}
