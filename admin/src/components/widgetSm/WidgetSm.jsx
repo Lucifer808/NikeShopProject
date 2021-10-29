@@ -1,9 +1,11 @@
-import React,{ useState, useEffect } from 'react'
-import './widgetSm.css'
+import React,{ useState, useEffect } from 'react';
+import './widgetSm.css';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import { userReq } from '../../request'
+import { userReq } from '../../request';
+import { Link } from 'react-router-dom';
 function WidgetSm() {
     const [users, setUsers] = useState([]);
+    const [userId, setUserId] = useState();
     useEffect(() => {
         const getUsers = async () =>{
             try{
@@ -13,6 +15,8 @@ function WidgetSm() {
         }
         getUsers();
     },[])
+    const handleClick = (e) => {
+    }
     return (
         <div className="widgetSm">
             <span className="widgetSmTitle">Tài khoản mới</span>
@@ -24,10 +28,12 @@ function WidgetSm() {
                         <span className="widgetSmUsername">{user.name}</span>
                         <span className="widgetSmUserTitle">{user.isAdmin === true ? 'Quản trị viên' : 'Khách hàng'}</span>
                     </div>
+                        <Link to={"/user/" + user._id} style={{textDecoration: 'none'}}>
                         <button className="widgetSmButton">
                             <VisibilityIcon className="widgetSmIcon"></VisibilityIcon>
                             Xem
                         </button>
+                        </Link>
                 </li>
             ))
 

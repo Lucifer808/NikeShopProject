@@ -109,6 +109,7 @@ function NewProduct() {
                 <div className="addProductItem">
                     <label htmlFor="">Tồn kho: </label>
                     <select onChange={handleChange} name="inStock">
+                        <option selected disabled>-- Chọn --</option>
                         <option value="true">Còn hàng</option>
                         <option value="false">Hết hàng</option>
                     </select>

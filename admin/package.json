@@ -23,6 +23,7 @@
     "recharts": "^2.1.4",
     "redux-persist": "^6.0.0",
     "timeago.js": "^4.0.2",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

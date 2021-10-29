@@ -201,6 +201,7 @@ function Product() {
                         />
                         <label>Tồn kho:</label>
                         <select name="inStock" id="idStock" onChange={handleChange}>
+                            <option selected disabled>-- Chọn --</option>
                             <option value="true">Còn hàng</option>
                             <option value="false">Hết hàng</option>
                         </select>

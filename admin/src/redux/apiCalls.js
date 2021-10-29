@@ -27,6 +27,14 @@ import {
     addUserFailure
 
 } from './reduxUserData';
+import {
+    getOrderStart, 
+    getOrderSuccess, 
+    getOrderFailure, 
+    updateOrderStart,
+    updateOrderSuccess,
+    updateOrderFailure
+} from './reduxOrder';
 import { publicReq, userReq } from '../request';
 
 // Login/Logout
@@ -114,5 +122,24 @@ export const addUserData = async (user, dispatch) =>{
         dispatch(addUserSuccess(res.data));
     }catch(err){
         dispatch(addUserFailure());
+    }
+}
+// Order
+export const getOrders = async (dispatch) =>{
+    dispatch(getOrderStart());
+    try{
+        const res = await userReq.get('/orders')
+        dispatch(getOrderSuccess(res.data));
+    }catch(err){
+        dispatch(getOrderFailure());
+    }
+}
+export const updateOrder = async (id, order, dispatch) =>{
+    dispatch(updateOrderStart());
+    try{
+        const res = await userReq.put(`/orders/${id}`, order);
+        dispatch(updateOrderSuccess(id, order));
+    }catch(err){
+        dispatch(updateOrderFailure());
     }
 }

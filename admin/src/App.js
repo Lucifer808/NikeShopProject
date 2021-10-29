@@ -7,6 +7,8 @@ import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
+import OrdersList from "./pages/ordersList/OrdersList";
+import Order from "./pages/order/Order";
 import './app.css'
 import {
   BrowserRouter as Router,
@@ -40,6 +42,12 @@ function App() {
                   </Route>
                   <Route path="/newUser">
                     <NewUser />
+                  </Route>
+                  <Route path="/orders">
+                    <OrdersList />
+                  </Route>
+                  <Route path="/order/:orderId">
+                    <Order />
                   </Route>
                   <Route path="/products">
                     <ProductList />

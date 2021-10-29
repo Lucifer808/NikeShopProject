@@ -52,10 +52,12 @@ function Sidebar() {
                                 Products
                             </li>
                         </Link>
-                        <li className="sidebarListItem">
-                            <AttachMoneyIcon className="sidebarIcon"></AttachMoneyIcon>
-                            Transactions
-                        </li>
+                        <Link to='/orders' className='link'>
+                            <li className="sidebarListItem">
+                                <AttachMoneyIcon className="sidebarIcon"></AttachMoneyIcon>
+                                Transactions
+                            </li>
+                        </Link>
                         <li className="sidebarListItem">
                             <BarChartIcon className="sidebarIcon"></BarChartIcon>
                             Reports

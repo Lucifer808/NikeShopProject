@@ -1,0 +1,125 @@
+.Order{
+    flex: 4;
+}
+.orderTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.orderAddButton{
+    border: none;
+    width: 80px;
+    padding: 5px;
+    background-color: rgb(0, 128, 68);
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+.orderContainer{
+    margin-top: 20px;
+}
+.orderShow{
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 13px -8px #000000; 
+    box-shadow: 0px 0px 13px -8px #000000;
+    margin:10px 20px;
+
+}
+.orderUpdate{
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 13px -8px #000000; 
+    box-shadow: 0px 0px 13px -8px #000000;
+    margin:10px 20px;
+}
+.orderShowTop{
+    display: flex;
+    align-items: center;
+}
+.orderShowImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.orderShowTopTitle{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.orderShowOrderTitle{
+    font-weight: 600;
+    font-size: 20px;
+}
+.orderShowTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0 0 20px;
+}
+.orderShowTitle{
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+.orderShowInfo{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #444;
+}
+.orderShowIcon{
+    font-size: 16px !important;
+}
+.orderShowRightOther{
+    margin-top: 20px;
+}
+.orderShowInfoTitle{
+    margin-left: 10px;
+}
+.orderUpdate{
+    height: 100%;
+}
+.orderUpdate>table{
+    width: 100%;
+    height: inherit;
+    margin-top: 20px;
+}
+.orderUpdateTitle{
+    font-size: 24px;
+    font-weight: 600;
+}
+.orderTableHeader>th{
+    margin-left: 100px;
+}
+.orderTableInfo{
+    padding: 10px;
+}
+.orderTableInfo>td{
+    text-align: center;
+    padding: 20px;
+}
+.orderBottomInfo{
+    text-align: right;
+    margin-right: 50px;
+}
+.orderBottomTitle{
+    font-weight: 600;
+    font-size: 20px;
+}
+.orderBottomForm{
+    margin-top: 10px;
+}
+.orderBottomForm>select{
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+.orderUpdateButton{
+    border-radius: 5px;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
+    margin-left: 12px;
+}

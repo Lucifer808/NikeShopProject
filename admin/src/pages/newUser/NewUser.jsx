@@ -101,6 +101,7 @@ function NewUser() {
                 <div className="newUserItem">
                     <label>Quyền hạn:</label>
                     <select className="newUserIsAdmin" onChange={handleChange} name="isAdmin">
+                        <option selected disabled>-- Chọn --</option>
                         <option value="false">Người dùng</option>
                         <option value="true">Quản trị viên</option>
                     </select>
