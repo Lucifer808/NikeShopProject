@@ -36,8 +36,8 @@ const Option = styled.option `
 
 `
 const ProductList = () => {
-    const location = useLocation();
-    const cate = location.pathname.split('/')[2];
+    const search = useLocation().search;
+    const cate = new URLSearchParams(search).get('category');
     const [filters, setFilters] = useState({});
     const [sort, setSort] = useState("newest");
     const handleFilter = (e) => {
@@ -47,11 +47,12 @@ const ProductList = () => {
             [e.target.name]: value,
         })
     }
+    console.log(cate)
     return (
         <Container>
             <Annountcement />
             <Navbar />
-            <Title>Sản phẩm</Title>
+            <Title>Kết quả tìm kiếm theo: {cate}</Title>
             <FilterContainer>
                 <Filter>
                     <FilterText>

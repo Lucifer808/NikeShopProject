@@ -66,6 +66,9 @@ const FilterColor = styled.div `
     margin: 0 5px;
     cursor: pointer;
     border: 0.5px solid #ccc;
+    &:active{
+        border: 1px solid black;
+    }
 `
 const FilterSize = styled.select `
     margin-left: 10px;

@@ -40,14 +40,18 @@ const RightSide = styled.div`
     align-items: center;
     ${mobile({justifyContent: "center"})}
 `
-const SearchContainer = styled.div`
+const SearchContainer = styled.form`
     border: 0.5px solid lightgray;
     display: flex;
     align-items: center;
     margin-left: 25px;
-    padding: 2px;
     border-radius: 10px;
     margin-right: 10px;
+`
+const SearchBtn = styled.button`
+    border: none;
+    background-color: transparent;
+    padding-top: 4px;
 `
 const Input = styled.input`
     margin-left: 10px;
@@ -102,9 +106,9 @@ const Navbar = () => {
                 </CenterSide>
                 <RightSide>
                     <MenuItem>
-                    <SearchContainer>
-                        <Input placeholder="Tìm kiếm..."/>
-                        <SearchIcon style={{cursor: 'pointer', fontSize: '18px', color: 'gray'}}></SearchIcon>
+                    <SearchContainer action="/search" method="GET">
+                        <Input name="category" placeholder="Tìm kiếm..."/>
+                        <SearchBtn type="submit"><SearchIcon style={{cursor: 'pointer', fontSize: '18px', color: 'gray'}}></SearchIcon></SearchBtn>
                     </SearchContainer>
                     <Link to='/cart'>
                         <Badge badgeContent={quantity} color="primary">

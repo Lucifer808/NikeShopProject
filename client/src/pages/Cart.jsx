@@ -161,6 +161,9 @@ const Cart = () => {
         }
         stripeToken && makeReq();
     },[stripeToken, cart.total, history])
+    const handleBack = () => {
+        window.history.back();
+    }
     return (
         <Container>
             <Annountcement />
@@ -168,7 +171,7 @@ const Cart = () => {
             <Wrapper>
                 <Title>Giỏ hàng</Title>
                 <TopSide>
-                    <TopButton>Tiếp tục mua hàng</TopButton>
+                    <TopButton onClick={handleBack}>Tiếp tục mua hàng</TopButton>
                     <TopTexts>
                         <TopText>Sản phẩm trong giỏ hàng (0)</TopText>
                         <TopText>Sản phẩm yêu thích (0)</TopText>
