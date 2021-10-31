@@ -162,6 +162,7 @@ const Product = () => {
                         <Filter>
                             <FilterTitle>Kích cỡ: </FilterTitle>
                             <FilterSize onChange={(e) => setSize(e.target.value)}>
+                                <FilterSizeOption selected disabled>-- Chọn --</FilterSizeOption>
                             {product.size?.map(sz => 
                                 <FilterSizeOption key={sz}>{sz}</FilterSizeOption>
                             )}

@@ -4,13 +4,14 @@ import { useLocation, Link } from "react-router-dom";
 import { userReq } from "../request";
 import { useDispatch } from 'react-redux';
 import { refeshProduct } from '../redux/reduxCart';
-
+import { getTotalPrice } from '../redux/reduxCart';
 
 const Success = () => {
   const location = useLocation();
   const data = location.state.stripeData;
   const cart = useSelector(state => state.cart);
   const currentUser = useSelector((state) => state.user.currentUser);
+  const total = useSelector(getTotalPrice)
   const [orderId, setOrderId] = useState(null);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -18,20 +19,23 @@ const Success = () => {
       try {
         const res = await userReq.post("/orders", {
           userId: currentUser._id,
+          userName: currentUser.username,
+          userPhone: currentUser.phone,
+          userEmail: currentUser.email,
           products: cart.products.map((item) => ({
-            productId: item._id,
+            productId: item.productId,
             quantity: item.quantity,
             size: item.size,
             color: item.color
           })),
-          amount: cart.total,
+          amount: total,
           address: data.billing_details.address,
         });
         setOrderId(res.data._id);
       } catch {}
     };
     data && createOrder();
-  }, [cart, data, currentUser]);
+  }, [cart, data, currentUser, total]);
   const handleClick = () => {
     dispatch(
       refeshProduct()
