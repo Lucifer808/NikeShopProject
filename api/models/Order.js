@@ -3,6 +3,9 @@ const Schema = mongoose.Schema;
 
 const OrderSchema = new Schema({
     userId: {type: String, required: true},
+    userName: {type: String},
+    userPhone: {type: String},
+    userEmail: {type: String},
     products: [
         {
             productId:{type: String},
