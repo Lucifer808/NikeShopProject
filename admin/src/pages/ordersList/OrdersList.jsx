@@ -14,11 +14,12 @@ const OrdersList = () => {
         { field: "_id", headerName: "Mã đơn hàng", width: 200 },
         { field: "userId", headerName: "Mã khách hàng", width: 200 },
         { field: "amount", headerName: "Giá trị đơn hàng", width: 160},
-        { field: "status", headerName: "Trạng thái đơn hàng", width: 200 },
+        { field: "status", headerName: "Trạng thái đơn hàng", width: 180 },
+        { field: "createdAt", headerName: "Thời gian đặt hàng", width: 200 },
         {
             field: "action",
             headerName: "Action",
-            width: 150,
+            width: 80,
             renderCell: (params) =>{
                 return (
                     <>

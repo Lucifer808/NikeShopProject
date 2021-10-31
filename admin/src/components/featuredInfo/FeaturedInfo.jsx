@@ -33,26 +33,26 @@ function FeaturedInfo() {
                 <span className="featuredSub">So với tháng trước</span>
             </div>
             <div className="featuredItem">
-                <span className="featuredTitle">Sales</span>
+                <span className="featuredTitle">Đơn hàng</span>
                 <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">$4,123</span>
+                    <span className="featuredMoney">30</span>
                     <span className="featuredMoneyRate">
-                    -10,13
+                    +10%
                     <ArrowDownwardIcon className="featuredIcon negative"></ArrowDownwardIcon>
                     </span>
                 </div>
-                <span className="featuredSub">Compared to last month</span>
+                <span className="featuredSub">So với tháng trước</span>
             </div>
             <div className="featuredItem">
-                <span className="featuredTitle">Cost</span>
+                <span className="featuredTitle">Người dùng</span>
                 <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">$2,123</span>
+                    <span className="featuredMoney">20</span>
                     <span className="featuredMoneyRate">
-                    12,13
+                    +12%
                     <ArrowUpwardIcon className="featuredIcon"></ArrowUpwardIcon>
                     </span>
                 </div>
-                <span className="featuredSub">Compared to last month</span>
+                <span className="featuredSub">So với tháng trước</span>
             </div>
         </div>
     )

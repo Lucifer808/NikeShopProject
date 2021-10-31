@@ -44,18 +44,18 @@ const Order = () => {
                         <div className="orderShowTitle">Chi tiết tài khoản</div>
                             <div className="orderShowInfo">
                                 <PermIdentityIcon className="orderShowIcon"></PermIdentityIcon>
-                                <div className="orderShowInfoTitle">{order._id}</div>
+                                <div className="orderShowInfoTitle">{order.userName}</div>
                             </div>
                             <div className="orderShowInfo">
                                 <MailOutlineIcon className="orderShowIcon"></MailOutlineIcon>
-                                <div className="orderShowInfoTitle"></div>
+                                <div className="orderShowInfoTitle">{order.userEmail}</div>
                             </div>
                         </div>
                         <div className="orderShowRight">
                             <div className="orderShowTitle">Thông tin giao hàng</div>
                                 <div className="orderShowInfo">
                                     <PhoneAndroidIcon className="orderShowIcon"></PhoneAndroidIcon>
-                                    <div className="orderShowInfoTitle"> </div>
+                                    <div className="orderShowInfoTitle">{order.userPhone}</div>
                                 </div>
                                 <div className="orderShowInfo">
                                     <PublicIcon className="orderShowIcon"></PublicIcon>

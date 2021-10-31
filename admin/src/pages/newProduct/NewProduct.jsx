@@ -77,11 +77,20 @@ function NewProduct() {
                 </div>
                 <div className="addProductItem">
                     <label htmlFor="">Tên sản phẩm: </label>
-                    <input name="title" type="text" placeholder="Dell Vostro 1122" onChange={handleChange}/>
+                    <input 
+                    name="title" 
+                    type="text" 
+                    placeholder="Vd: Nike Sportswear Swoosh" 
+                    autoComplete="off"
+                    onChange={handleChange}/>
                 </div>
                 <div className="addProductItem">
                     <label htmlFor="">Giá sản phẩm: </label>
-                    <input name="price" type="number" placeholder="890000" onChange={handleChange}/>
+                    <input 
+                    name="price" 
+                    type="number" 
+                    placeholder="Vd: 890000" 
+                    onChange={handleChange}/>
                 </div>
                 <div className="addProductItem">
                 <label htmlFor="">Mô tả sản phẩm:</label>
@@ -89,22 +98,31 @@ function NewProduct() {
                     name="desc"
                     aria-label="minimum height"
                     minRows={3}
-                    placeholder="Mô tả chi tiết sản phẩm"
+                    placeholder="Mô tả chi tiết sản phẩm..."
                     style={{ width: 265 }}
                     onChange={handleChange}
                 />
                 </div>
                 <div className="addProductItem">
                     <label htmlFor="">Phân loại sản phẩm: </label>
-                    <input type="text" placeholder="t-shirt, men" onChange={handleCate}/>
+                    <input 
+                    type="text" 
+                    placeholder="Vd: t-shirt, men" 
+                    onChange={handleCate}/>
                 </div>
                 <div className="addProductItem">
                     <label htmlFor="">Màu sản phẩm: </label>
-                    <input type="text" placeholder="yellow, red" onChange={handleColor}/>
+                    <input
+                    type="text" 
+                    placeholder="Vd: Yellow, Red" 
+                    onChange={handleColor}/>
                 </div>
                 <div className="addProductItem">
                     <label htmlFor="">Kích cỡ sản phẩm: </label>
-                    <input type="text" placeholder="XL, L" onChange={handleSize}/>
+                    <input 
+                    type="text" 
+                    placeholder="Vd: XL, L" 
+                    onChange={handleSize}/>
                 </div>
                 <div className="addProductItem">
                     <label htmlFor="">Tồn kho: </label>

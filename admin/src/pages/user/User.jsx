@@ -42,32 +42,32 @@ function User() {
                         className="userShowImg"
                         />
                         <div className="userShowTopTitle">
-                            <div className="userShowUsername">{user.name}</div>
-                            <div className="userShowUserTitle">Admin: {user.isAdmin ? "Yes" : "No"}</div>
+                            <div className="userShowUsername">{user?.name}</div>
+                            <div className="userShowUserTitle">Admin: {user?.isAdmin ? "Yes" : "No"}</div>
                         </div>
                     </div>
                     <div className="userShowBottom">
                         <div className="userShowTitle">Chi tiết tài khoản</div>
                         <div className="userShowIndo">
                             <PermIdentityIcon className="userShowIcon"></PermIdentityIcon>
-                            <div className="userShowInfoTitle">{user.username}</div>
+                            <div className="userShowInfoTitle">{user?.username}</div>
                         </div>
                         <div className="userShowIndo">
                             <CalendarTodayIcon className="userShowIcon"></CalendarTodayIcon>
-                            <div className="userShowInfoTitle">{user.dayOfBirth ? user.dayOfBirth : 'Chưa nhập thông tin'}</div>
+                            <div className="userShowInfoTitle">{user?.dayOfBirth ? user?.dayOfBirth : 'Chưa nhập thông tin'}</div>
                         </div>
                         <div className="userShowTitle">Thông tin liên hệ</div>
                         <div className="userShowIndo">
                             <PhoneAndroidIcon className="userShowIcon"></PhoneAndroidIcon>
-                            <div className="userShowInfoTitle">{user.phone ? user.phone : 'Chưa nhập thông tin'}</div>
+                            <div className="userShowInfoTitle">{user?.phone ? user?.phone : 'Chưa nhập thông tin'}</div>
                         </div>
                         <div className="userShowIndo">
                             <MailOutlineIcon className="userShowIcon"></MailOutlineIcon>
-                            <div className="userShowInfoTitle">{user.email}</div>
+                            <div className="userShowInfoTitle">{user?.email}</div>
                         </div>
                         <div className="userShowIndo">
                             <LocationOnIcon className="userShowIcon"></LocationOnIcon>
-                            <div className="userShowInfoTitle">{user.address ? user.address : 'Chưa nhập thông tin'}</div>
+                            <div className="userShowInfoTitle">{user?.address ? user?.address : 'Chưa nhập thông tin'}</div>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ function User() {
                                 <input
                                 name="name" 
                                 type="text" 
-                                placeholder={user.name}
+                                placeholder={user?.name}
                                 className="UserUpdateInput"
                                 onChange={handleChange}
                                 />
@@ -90,7 +90,7 @@ function User() {
                                 <input
                                 name="email" 
                                 type="text" 
-                                placeholder={user.email}
+                                placeholder={user?.email}
                                 className="UserUpdateInput"
                                 onChange={handleChange}
                                 />
