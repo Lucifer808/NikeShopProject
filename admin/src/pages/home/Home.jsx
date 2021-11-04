@@ -33,7 +33,7 @@ function Home() {
                 list.map((item) =>{
                     setUsersStats((prev) =>[
                         ...prev,
-                        { name: MONTHS[item._id - 1], "Active User": item.total }
+                        { name: MONTHS[item._id - 1], "Tài khoản mới": item.total }
                     ])
                 })
             }catch{}
@@ -43,7 +43,7 @@ function Home() {
     return (
         <div className="home">
             <FeaturedInfo />
-            <Chart data={usersStats} title="Thống kê tài khoản mới" grid dataKey="Active User"/>
+            <Chart data={usersStats} title="Thống kê tài khoản mới" grid dataKey="Tài khoản mới"/>
             <div className="homeWidget">
                 <WidgetSm />
                 <WidgetLg />

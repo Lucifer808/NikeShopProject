@@ -26,7 +26,6 @@ function Topbar() {
     const dispath = useDispatch();
     const handleLogOut = () =>{
         logout(dispath, currentUser);
-        window.location.reload();
         window.location.href='/login';
     }
     return (

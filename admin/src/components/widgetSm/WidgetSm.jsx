@@ -31,7 +31,7 @@ function WidgetSm() {
                         <Link to={"/user/" + user._id} style={{textDecoration: 'none'}}>
                         <button className="widgetSmButton">
                             <VisibilityIcon className="widgetSmIcon"></VisibilityIcon>
-                            Xem
+                            Chi tiết
                         </button>
                         </Link>
                 </li>

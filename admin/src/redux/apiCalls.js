@@ -30,7 +30,10 @@ import {
 import {
     getOrderStart, 
     getOrderSuccess, 
-    getOrderFailure, 
+    getOrderFailure,
+    deleteOderStart,
+    deleteOderSuccess,
+    deleteOderFailure, 
     updateOrderStart,
     updateOrderSuccess,
     updateOrderFailure
@@ -100,7 +103,7 @@ export const getUsersData = async (dispatch) =>{
 export const deleteUsersData = async (id, dispatch) =>{
     dispatch(deleteUserStart());
     try{
-        // const res = await userReq.delete(`/products/${id}`)
+        // const res = await userReq.delete(`/users/${id}`)
         dispatch(deleteUserSuccess(id));
     }catch(err){
         dispatch(deleteUserFailure());
@@ -141,5 +144,14 @@ export const updateOrder = async (id, order, dispatch) =>{
         dispatch(updateOrderSuccess(id, order));
     }catch(err){
         dispatch(updateOrderFailure());
+    }
+}
+export const deleteOrder = async (id, dispatch) =>{
+    dispatch(deleteOderStart());
+    try{
+        // const res = await userReq.delete(`/orders/${id}`)
+        dispatch(deleteOderSuccess(id));
+    }catch(err){
+        dispatch(deleteOderFailure());
     }
 }

@@ -80,9 +80,10 @@ function User() {
                                 <input
                                 name="name" 
                                 type="text" 
-                                placeholder={user?.name}
+                                placeholder={user?.name ? user?.name : 'Chưa nhập thông tin'}
                                 className="UserUpdateInput"
                                 onChange={handleChange}
+                                disabled={!user?.isAdmin}
                                 />
                             </div>
                             <div className="userUpdateItem">
@@ -90,9 +91,10 @@ function User() {
                                 <input
                                 name="email" 
                                 type="text" 
-                                placeholder={user?.email}
+                                placeholder={user?.email ? user?.email : 'Chưa nhập thông tin'}
                                 className="UserUpdateInput"
                                 onChange={handleChange}
+                                disabled={!user?.isAdmin}
                                 />
                             </div>
                             <div className="userUpdateItem">
@@ -100,9 +102,10 @@ function User() {
                                 <input
                                 name="phone" 
                                 type="text" 
-                                placeholder="094566314"
+                                placeholder={user?.phone ? user?.phone : 'Chưa nhập thông tin'}
                                 className="UserUpdateInput"
                                 onChange={handleChange}
+                                disabled={!user?.isAdmin}
                                 />
                             </div>
                             <div className="userUpdateItem">
@@ -110,9 +113,10 @@ function User() {
                                 <input
                                 name="dayOfBirth" 
                                 type="text" 
-                                placeholder="02/12/2000"
+                                placeholder={user?.dayOfBirth ? user?.dayOfBirth : 'Chưa nhập thông tin'}
                                 className="UserUpdateInput"
                                 onChange={handleChange}
+                                disabled={!user?.isAdmin}
                                 />
                             </div>
                             <div className="userUpdateItem">
@@ -120,9 +124,10 @@ function User() {
                                 <input
                                 name="address" 
                                 type="text" 
-                                placeholder="Can Tho City"
+                                placeholder={user?.address ? user?.address : 'Chưa nhập thông tin'}
                                 className="UserUpdateInput"
                                 onChange={handleChange}
+                                disabled={!user?.isAdmin}
                                 />
                             </div>
                         </div>

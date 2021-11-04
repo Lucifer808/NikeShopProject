@@ -20,6 +20,21 @@ const orderSlice = createSlice({
             state.isFetching=false;
             state.error=true;
         },
+         // Delete Oder
+        deleteOderStart: (state) =>{
+            state.isFetching=true;
+            state.error=false;
+        },
+        deleteOderSuccess: (state, action) =>{
+            state.isFetching=false;
+            state.orders.splice(
+                state.orders.findIndex(item => item._id === action.payload),1
+            );
+        },
+        deleteOderFailure: (state) =>{
+            state.isFetching=false;
+            state.error=true;
+        },
          // Update Order
         updateOrderStart: (state) =>{
             state.isFetching=true;
@@ -40,7 +55,10 @@ const orderSlice = createSlice({
 export const {
     getOrderStart, 
     getOrderSuccess, 
-    getOrderFailure, 
+    getOrderFailure,
+    deleteOderStart,
+    deleteOderSuccess,
+    deleteOderFailure, 
     updateOrderStart,
     updateOrderSuccess,
     updateOrderFailure,

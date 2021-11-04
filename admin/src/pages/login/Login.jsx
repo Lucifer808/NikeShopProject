@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/apiCalls';
-import { Link } from 'react-router-dom';
 import './login.css'
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -10,9 +9,8 @@ const Login = () => {
     const handleClick = (e) =>{
         e.preventDefault();
         login(dispath, {username, password});
-        window.location.reload();
+        window.location.replace('http://localhost:3000/');
     }
-    let admin = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser?.isAdmin || null;
     return (
         <div className='login'>
             <div className='loginWrapper'>

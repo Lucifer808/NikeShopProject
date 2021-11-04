@@ -4,28 +4,34 @@ import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import { getOrders } from '../../redux/apiCalls';
 import { useDispatch, useSelector} from 'react-redux';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { deleteOrder } from '../../redux/apiCalls';
 const OrdersList = () => {
     const dispatch = useDispatch();
     const orders = useSelector((state) => state.order.orders);
     useEffect(() => {
         getOrders(dispatch);
     },[dispatch]);
+    const handleDelete = (id) => {
+        deleteOrder(id, dispatch)
+    }
     const columns = [
         { field: "_id", headerName: "Mã đơn hàng", width: 200 },
         { field: "userId", headerName: "Mã khách hàng", width: 200 },
         { field: "amount", headerName: "Giá trị đơn hàng", width: 160},
-        { field: "status", headerName: "Trạng thái đơn hàng", width: 180 },
+        { field: "status", headerName: "Trạng thái", width: 120 },
         { field: "createdAt", headerName: "Thời gian đặt hàng", width: 200 },
         {
             field: "action",
-            headerName: "Action",
-            width: 80,
+            headerName: "Hàng động",
+            width: 120,
             renderCell: (params) =>{
                 return (
                     <>
                     <Link to={"/order/" + params.row._id}>
                     <button className="ordersListEdit">Edit</button>
                     </Link>
+                    <DeleteOutlineIcon className="productListDelete" onClick={()=>handleDelete(params.row._id)}></DeleteOutlineIcon>
                     </>
                 )
             }
