@@ -8,12 +8,14 @@ const Container = styled.div `
     width: 100vw;
     height: 100vh;
     display: flex;
-    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url("https://static.nike.com/a/images/f_auto/dpr_1.0/w_335,c_limit/7c89ac28-1e49-4f73-a9fc-40ccc05ba1e7/men-s-shoes-clothing-accessories.jpg") center;
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     align-items: center;
     justify-content: center;
 `
 const Wrapper = styled.div `
-    width: 40%;
+    width: 35%;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -30,9 +32,11 @@ const Form = styled.form `
 `
 const Input = styled.input `
     flex: 1;
-    min-width: 90%;
+    min-width: 95%;
     margin: 0px 10px 10px 0;
     padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #888;
 `
 const Button = styled.button `
     width: 100%;
@@ -69,12 +73,16 @@ const Login = () => {
                 <Title>ĐĂNG NHẬP</Title>
                 <Form>
                     <SubTitle>Tên tài khoản:</SubTitle>
-                    <Input placeholder="Vd: duynguyen123" onChange={e => setUsername(e.target.value)}/>
+                    <Input 
+                    placeholder="Vd: duynguyen123" 
+                    onChange={e => setUsername(e.target.value)}/>
                     <SubTitle>Mật khẩu:</SubTitle>
-                    <Input placeholder="Mật khẩu" onChange={e => setPassword(e.target.value)} type="password"/>
+                    <Input placeholder="Mật khẩu" 
+                    onChange={e => setPassword(e.target.value)} 
+                    type="password"/>
                     {error && <Error>Sai tài khoản hoặc mật khẩu</Error>}
                     <Button onClick={handleClick} disabled={isFetching}>ĐĂNG NHẬP</Button>
-                    <Link>Quên mật khẩu ?</Link>
+                    <Link to='/forgot'>Quên mật khẩu ?</Link>
                     <Link to='/register'>Tạo tài khoản ngay.</Link>
                 </Form>
             </Wrapper>

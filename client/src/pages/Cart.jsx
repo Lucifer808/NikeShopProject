@@ -146,7 +146,6 @@ const Button = styled.button `
 `
 const Cart = () => {
     const cart = useSelector(state => state.cart.products);
-    const cartItems = useSelector(getCartItems);
     const total = useSelector(getTotalPrice);
     const [stripeToken, setStripeToken] = useState(null);
     const dispatch = useDispatch();
@@ -168,7 +167,7 @@ const Cart = () => {
             }catch(err){}
         }
         stripeToken && makeReq();
-    },[stripeToken, total, history])
+    },[stripeToken, cart, total, history])
     const handleBack = () => {
         window.history.back();
     }

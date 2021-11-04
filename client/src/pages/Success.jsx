@@ -19,7 +19,7 @@ const Success = () => {
       try {
         const res = await userReq.post("/orders", {
           userId: currentUser._id,
-          userName: currentUser.username,
+          userName: currentUser.name,
           userPhone: currentUser.phone,
           userEmail: currentUser.email,
           products: cart.products.map((item) => ({
@@ -32,7 +32,9 @@ const Success = () => {
           address: data.billing_details.address,
         });
         setOrderId(res.data._id);
-      } catch {}
+      }catch(err) {
+        console.log(err)
+      }
     };
     data && createOrder();
   }, [cart, data, currentUser, total]);

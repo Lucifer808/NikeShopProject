@@ -18,6 +18,12 @@ const App = () => {
   return (
     <Router>
       <Switch>
+        <Route path="/login">
+          {user ? <Redirect to="/" /> : <Login />}
+        </Route>
+        <Route path="/register">
+          {user ? <Redirect to="/" /> : <Register />}
+        </Route>
         <Route exact path="/">
           <Home />
         </Route>
@@ -35,12 +41,6 @@ const App = () => {
         </Route>
         <Route path="/search">
           <Search />
-        </Route>
-        <Route path="/login">
-          {user ? <Redirect to="/" /> : <Login />}
-        </Route>
-        <Route path="/register">
-          {user ? <Redirect to="/" /> : <Register />}
         </Route>
       </Switch>
     </Router>
