@@ -13,6 +13,7 @@ function NewUser() {
     const handleClick = (e) => {
         e.preventDefault();
         addUserData(inputs,dispatch);
+        alert('Thêm tài khoản thành công');
         window.location.replace('http://localhost:3000/users');
     }
     return (

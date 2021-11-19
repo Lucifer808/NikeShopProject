@@ -46,7 +46,7 @@ function Product() {
                 list.map((item) =>
                   setPStats((prev) => [
                     ...prev,
-                    { name: MONTHS[item._id - 1], Sales: item.total },
+                    { name: MONTHS[item._id - 1], "Doanh thu": item.total },
                   ])
                 );
               }catch(err){
@@ -129,7 +129,7 @@ function Product() {
             </div>
             <div className="productTop">
                 <div className="productTopLeft">
-                    <Chart data={pStats} dataKey="Sales" title="Doanh thu sản phẩm"/>
+                    <Chart data={pStats} dataKey="Doanh thu" title="Doanh thu sản phẩm"/>
                 </div>
                 <div className="productTopRight">
                     <div className="productInfoTop">

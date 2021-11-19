@@ -72,7 +72,7 @@ function User() {
                     </div>
                 </div>
                 <div className="userUpdate">
-                    <span className="userUpdateTitle">Chỉnh sửa</span>
+                    <span className="userUpdateTitle">Thông tin chi tiết</span>
                     <form action="" className="userUpdateForm">
                         <div className="userUpdateLeft">
                             <div className="userUpdateItem">

@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/apiCalls';
+import { useSelector } from 'react-redux';
 import './login.css'
 const Login = () => {
+    const {currentUser} = useSelector(state => state.user);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const dispath = useDispatch();
     const handleClick = (e) =>{
         e.preventDefault();
         login(dispath, {username, password});
-        window.location.replace('http://localhost:3000/');
+        window.location.reload();
     }
     return (
         <div className='login'>
@@ -30,6 +32,8 @@ const Login = () => {
                     onChange={e=>setPassword(e.target.value)}
                     className='loginInput'
                     ></input>
+                    <input type="checkbox"></input>
+                    <lable style={{marginBottom: '2px'}}> Ghi nhớ tài khoản</lable>
                     <button onClick={handleClick} className='loginBtn'>Đăng nhập</button>
                 </div>
             </div>

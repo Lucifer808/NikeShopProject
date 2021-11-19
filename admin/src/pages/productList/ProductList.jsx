@@ -13,6 +13,7 @@ function ProductList() {
     }, [dispatch])
     const handleDelete = (id) => {
         deleteProduct(id, dispatch)
+        alert("Sản phẩm đã được xóa");
     }
      const columns = [
          { field: "_id", headerName: "ID", width: 220 },

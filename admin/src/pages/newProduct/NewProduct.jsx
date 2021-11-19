@@ -62,6 +62,7 @@ function NewProduct() {
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             const product = {...inputs, img: downloadURL, categories: cate, size: size, color: color};
             addProduct(product, dispatch);
+            alert("Thêm sản phẩm mới thành công");
             window.location.replace('http://localhost:3000/products');
             });
         }
@@ -97,9 +98,9 @@ function NewProduct() {
                 <TextareaAutosize
                     name="desc"
                     aria-label="minimum height"
-                    minRows={3}
+                    minRows={4}
                     placeholder="Mô tả chi tiết sản phẩm..."
-                    style={{ width: 265 }}
+                    style={{ width: 420 }}
                     onChange={handleChange}
                 />
                 </div>

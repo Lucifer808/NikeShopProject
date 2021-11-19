@@ -13,7 +13,8 @@ const OrdersList = () => {
         getOrders(dispatch);
     },[dispatch]);
     const handleDelete = (id) => {
-        deleteOrder(id, dispatch)
+        deleteOrder(id, dispatch);
+        alert("Đơn hàng đã được xóa");
     }
     const columns = [
         { field: "_id", headerName: "Mã đơn hàng", width: 200 },

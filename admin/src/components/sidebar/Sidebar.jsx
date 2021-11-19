@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './sidebar.css'
 import LineStyleIcon from '@mui/icons-material/LineStyle';
 import TimelineIcon from '@mui/icons-material/Timeline';
@@ -13,59 +13,61 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import AddchartIcon from '@mui/icons-material/Addchart';
 import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 function Sidebar() {
+    const location = useLocation();
+    const href = location.pathname.split('/')[1];
     return (
         <div className="sidebar">
             <div className="sidebarWrapper">
                 <div className="sidebarMenu">
-                    <h3 className="sidebarTitle">Dashboard</h3>
+                    <h3 className="sidebarTitle">Bảng điểu khiển</h3>
                     <ul className="sidebarList">
                         <Link to="/" className="link">
-                            <li className="sidebarListItem active">
+                            <li className={`sidebarListItem ${href===''?'active' : ''}`}>
                                 <LineStyleIcon className="sidebarIcon"></LineStyleIcon>
-                                Home
+                                Trang chủ
                             </li>
                         </Link>
-                        <li className="sidebarListItem">
-                            <TimelineIcon className="sidebarIcon"></TimelineIcon>
-                            Analytics
-                        </li>
-                        <li className="sidebarListItem">
-                            <TrendingUpIcon className="sidebarIcon"></TrendingUpIcon>
-                            Sales
-                        </li>
+                            <li className="sidebarListItem">
+                                <TimelineIcon className="sidebarIcon"></TimelineIcon>
+                                Phân tích dữ liệu
+                            </li>
+                            <li className="sidebarListItem">
+                                <TrendingUpIcon className="sidebarIcon"></TrendingUpIcon>
+                                Doanh thu bán hàng
+                            </li>
                     </ul>
                 </div>
                 <div className="sidebarMenu">
-                    <h3 className="sidebarTitle">Quick Menu</h3>
+                    <h3 className="sidebarTitle">Truy cập nhanh</h3>
                     <ul className="sidebarList">
                         <Link to="/users" className="link">
-                            <li className="sidebarListItem">
+                            <li className={`sidebarListItem ${href==='users'?'active' : ''}`}>
                                 <PeopleOutlineIcon className="sidebarIcon"></PeopleOutlineIcon>
-                                Users
+                                Người dùng
                             </li>
                         </Link>
                         <Link to="/products" className="link">
-                            <li className="sidebarListItem">
+                            <li className={`sidebarListItem ${href==='products'?'active' : ''}`}>
                                 <ProductionQuantityLimitsIcon className="sidebarIcon"></ProductionQuantityLimitsIcon>
-                                Products
+                                Sản phẩm
                             </li>
                         </Link>
                         <Link to='/orders' className='link'>
-                            <li className="sidebarListItem">
+                            <li className={`sidebarListItem ${href==='orders'?'active' : ''}`}>
                                 <AttachMoneyIcon className="sidebarIcon"></AttachMoneyIcon>
-                                Transactions
+                                Đơn hàng
                             </li>
                         </Link>
-                        <li className="sidebarListItem">
-                            <BarChartIcon className="sidebarIcon"></BarChartIcon>
-                            Reports
-                        </li>
+                            <li className="sidebarListItem">
+                                <BarChartIcon className="sidebarIcon"></BarChartIcon>
+                                Thống kê
+                            </li>
                     </ul>
                 </div>
                 <div className="sidebarMenu">
-                    <h3 className="sidebarTitle">Notifications</h3>
+                    <h3 className="sidebarTitle">Thông báo</h3>
                     <ul className="sidebarList">
                         <li className="sidebarListItem">
                             <MailOutlineIcon className="sidebarIcon"></MailOutlineIcon>
@@ -73,28 +75,28 @@ function Sidebar() {
                         </li>
                         <li className="sidebarListItem">
                             <DynamicFeedIcon className="sidebarIcon"></DynamicFeedIcon>
-                            Feedback
+                            Phản hồi
                         </li>
                         <li className="sidebarListItem">
                             <ChatBubbleOutlineIcon className="sidebarIcon"></ChatBubbleOutlineIcon>
-                            Messages
+                            Tin nhắn
                         </li>
                     </ul>
                 </div>
                 <div className="sidebarMenu">
-                    <h3 className="sidebarTitle">Staff</h3>
+                    <h3 className="sidebarTitle">Nhân viên</h3>
                     <ul className="sidebarList">
                         <li className="sidebarListItem">
                             <WorkOutlineIcon className="sidebarIcon"></WorkOutlineIcon>
-                            Manage
+                            Quản lý
                         </li>
                         <li className="sidebarListItem">
                             <AddchartIcon className="sidebarIcon"></AddchartIcon>
-                            Analysis
+                            Phân tích
                         </li>
                         <li className="sidebarListItem">
                             <ReportGmailerrorredIcon className="sidebarIcon"></ReportGmailerrorredIcon>
-                            Reports
+                            Báo cáo
                         </li>
                     </ul>
                 </div>

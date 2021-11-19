@@ -13,6 +13,7 @@ function UserList() {
     }, [dispatch]);
     const handleDelete = (id) => {
         deleteUsersData(id, dispatch);
+        alert("Người dùng đã được xóa");
     }
     const columns = [
         { field: "_id", headerName: "ID", width: 200 },

@@ -4,7 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url("https://static.nike.com/a/images/f_auto/dpr_1.0/w_1237,c_limit/8b029647-53da-43ad-9234-70807cd676e4/nike-just-do-it.jpg") center;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
 .loginWrapper{
     display: flex;

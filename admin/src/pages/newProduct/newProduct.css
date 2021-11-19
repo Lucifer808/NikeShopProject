@@ -5,7 +5,7 @@
     margin-top: 10px;
 }
 .addProductItem{
-    width: 500px;
+    width: 800px;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -21,7 +21,7 @@
 }
 .addProductItem>select{
     padding: 10px;
-    width: 55%;
+    width: 53%;
 }
 .addProductButton{
     margin-bottom: 20px;
@@ -32,6 +32,6 @@
     border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
-    width: 275px;
+    width: 425px;
     margin-top: 40px;
 }

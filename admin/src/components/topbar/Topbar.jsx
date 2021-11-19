@@ -33,16 +33,12 @@ function Topbar() {
             <div className="topbarWrapper">
                 <Link to="/" className="link">
                     <div className="topLeft">
-                        <span className="logo">Adminstrator.</span>
+                        <span className="logo">Administrators.</span>
                     </div>
                 </Link>
                 <div className="topRight">
                     <div className="topbarIconContainer">
                         <NotificationsNoneIcon></NotificationsNoneIcon>
-                        <span className="topIconBadge">2</span>
-                    </div>
-                    <div className="topbarIconContainer">
-                        <LanguageIcon></LanguageIcon>
                         <span className="topIconBadge">2</span>
                     </div>
                     <div className="topbarIconContainer">
