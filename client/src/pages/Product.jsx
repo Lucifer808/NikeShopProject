@@ -10,6 +10,10 @@ import { useLocation } from 'react-router';
 import { publicReq } from '../request';
 import { addProduct } from '../redux/reduxCart';
 import { useDispatch } from 'react-redux';
+import Rating from '@mui/material/Rating';
+import Box from '@mui/material/Box';
+import StarIcon from '@mui/icons-material/Star';
+import Trending from '../components/Trending';
 const Container = styled.div ``
 const Wrapper = styled.div `
     padding: 50px;
@@ -119,6 +123,8 @@ const Product = () => {
     const [color, setColor] = useState('');
     const [size, setSize] = useState('');
     const dispatch = useDispatch();
+    const [value, setValue] = React.useState(2.5);
+    const [hover, setHover] = React.useState(-1);
     useEffect(() =>{
         const getProduct = async () =>{
             try{
@@ -140,6 +146,18 @@ const Product = () => {
             addProduct({...product, quantity, color, size})
         )
     }
+    const labels = {
+        0.5: 'Useless',
+        1: 'Useless+',
+        1.5: 'Poor',
+        2: 'Poor+',
+        2.5: 'Ok',
+        3: 'Ok+',
+        3.5: 'Good',
+        4: 'Good+',
+        4.5: 'Excellent',
+        5: 'Excellent+',
+      };
     return (
         <Container>
             <Annountcement />
@@ -152,6 +170,29 @@ const Product = () => {
                     <Title>{product.title}</Title>
                     <Description>{product.desc}</Description>
                     <Price>{product.price?.toLocaleString()} VND</Price>
+                    <Box
+                        sx={{
+                            width: 200,
+                            display: 'flex',
+                            alignItems: 'center',
+                        }}
+                        >
+                        <Rating
+                            name="hover-feedback"
+                            value={value}
+                            precision={0.5}
+                            onChange={(event, newValue) => {
+                            setValue(newValue);
+                            }}
+                            onChangeActive={(event, newHover) => {
+                            setHover(newHover);
+                            }}
+                            emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+                        />
+                        {value !== null && (
+                            <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+                        )}
+                    </Box>
                     <FilterContainer>
                         <Filter>
                             <FilterTitle>Màu: </FilterTitle>
@@ -179,6 +220,7 @@ const Product = () => {
                     </AddContainer>
                 </InfoContainer>
             </Wrapper>
+            <Trending />
             <Footer />
         </Container>
     )

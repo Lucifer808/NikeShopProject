@@ -7,6 +7,8 @@ import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import {mobile} from '../responsive';
 import { useLocation } from 'react-router';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 const Container = styled.div `
     
 `
@@ -60,11 +62,12 @@ const ProductList = () => {
                     </FilterText>
                     <Select name="color" onChange={handleFilter}>
                     <Option selected disabled>-- Màu --</Option>                        
-                    <Option value="Yellow">Vàng</Option>
+                    <Option value="Purple">Tím</Option>
                     <Option value="Red">Đỏ</Option>
                     <Option value="Blue">Xanh dương</Option>
                     <Option value="Black">Đen</Option>
                     <Option value="White">Trắng</Option>
+                    <Option value="Brown">Nâu</Option>
                     </Select>
                     <Select name="size" onChange={handleFilter}>
                     <Option selected disabled>-- Size --</Option>                        
@@ -88,6 +91,9 @@ const ProductList = () => {
                 </Filter>
             </FilterContainer>
             <Products cate={cate} filters={filters} sort={sort}/>
+            <Stack spacing={2} style={{display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "10px"}}>
+                <Pagination count={10} variant="outlined" color="primary" />
+            </Stack>
             <Newsletter />
             <Footer />
         </Container>

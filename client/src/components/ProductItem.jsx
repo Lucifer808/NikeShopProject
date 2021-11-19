@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import Checkbox from '@mui/material/Checkbox';
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+import Favorite from '@mui/icons-material/Favorite';
 import { Link } from 'react-router-dom';
 const Container = styled.div `
     flex: 1;
@@ -68,6 +70,7 @@ const Price = styled.p `
     font-size: 24px;
 `
 const ProductItem = ({product}) => {
+    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     return (
         <Container>
             <Image src={product.img} />
@@ -81,7 +84,7 @@ const ProductItem = ({product}) => {
                     </Link>
                 </Icon>
                 <Icon>
-                    <FavoriteBorderOutlinedIcon></FavoriteBorderOutlinedIcon>
+                    <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />}/>
                 </Icon>
             </Info>
             <Review>

@@ -4,6 +4,9 @@ import { login } from '../redux/apiCalls';
 import { mobile } from '../responsive';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 const Container = styled.div `
     width: 100vw;
     height: 100vh;
@@ -80,6 +83,9 @@ const Login = () => {
                     <Input placeholder="Mật khẩu" 
                     onChange={e => setPassword(e.target.value)} 
                     type="password"/>
+                    <FormGroup>
+                        <FormControlLabel control={<Checkbox defaultChecked />} label="Ghi nhớ tài khoản" />
+                    </FormGroup>
                     {error && <Error>Sai tài khoản hoặc mật khẩu</Error>}
                     <Button onClick={handleClick} disabled={isFetching}>ĐĂNG NHẬP</Button>
                     <Link to='/forgot'>Quên mật khẩu ?</Link>

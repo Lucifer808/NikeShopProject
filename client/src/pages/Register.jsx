@@ -39,6 +39,7 @@ const Input = styled.input `
     border: 1px solid #888;
 `
 const Agreement = styled.span `
+    display: flex;
     font-size: 14px;
     margin: 20px 0;
 `
@@ -114,7 +115,7 @@ const Register = () => {
                     placeholder="Nhập lại mật khẩu" 
                     type="password"/>
                     <Agreement>
-                        Tôi đã đọc kĩ <b> điều khoản sử dụng </b> và đồng ý với tất cả các điều khoản.
+                        <input type="checkbox" style={{marginRight: '5px', marginTop: '2px'}}></input><p style={{marginBottom: '5px'}}>Tôi đã đọc kĩ <b> điều khoản sử dụng </b> và đồng ý với tất cả các điều khoản.</p>
                     </Agreement>
                     <LoginTitle style={{fontSize:'12px', paddingRight:'50%', marginBottom: '20px'}}>
                         Bạn đã có tài khoản ? <Link to='/login' style={{fontSize:'16px'}}> Đăng nhập ngay</Link>

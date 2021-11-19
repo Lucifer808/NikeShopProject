@@ -7,6 +7,9 @@ import { refeshProduct } from '../redux/reduxCart';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 const Container = styled.div `
     height: 30px;
     background-color: #000;
@@ -25,7 +28,6 @@ const MenuTitle = styled.div `
 `
 const Annountcement = () => {
     const {currentUser} = useSelector(state => state.user);
-    const cart = useSelector(state => state.cart);
     const dispath = useDispatch();
     const handleClick = () =>{
         logout(dispath, currentUser);
@@ -43,7 +45,6 @@ const Annountcement = () => {
         <Container>
             { currentUser && (
                 <div>
-
                 <Button
                     id="basic-button"
                     aria-controls="basic-menu"
@@ -61,8 +62,11 @@ const Annountcement = () => {
                     'aria-labelledby': 'basic-button',
                     }}
                 >
-                    <MenuItem onClick={handleClose}>Thông tin cá nhân</MenuItem>
-                    <MenuItem onClick={handleClose}>Cài đặt</MenuItem>
+                    <Link to={'/profile/' + currentUser._id} style={{color: '#000', textDecoration: 'none'}}>
+                    <MenuItem onClick={handleClose}><AccountCircleOutlinedIcon style={{fontSize: '22px', marginRight: '2px'}}/>Thông tin cá nhân</MenuItem>
+                    </Link>
+                    <MenuItem onClick={handleClose}><LocalShippingIcon style={{fontSize: '22px', marginRight: '2px'}}/>Lịch sử mua hàng</MenuItem>
+                    <MenuItem onClick={handleClose}><ManageAccountsOutlinedIcon style={{fontSize: '22px', marginRight: '2px'}}/>Thay đổi mật khẩu</MenuItem>
                 </Menu>
             </div>
             ) 

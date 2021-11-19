@@ -9,7 +9,6 @@ const cartSlice = createSlice({
     reducers: {
         addProduct: (state, action) =>{
             const pseudoId = (new Date()).getTime();
-            console.log(action.payload)
             state.products.push({
                 id: pseudoId,
                 productId: action.payload._id,
@@ -18,6 +17,7 @@ const cartSlice = createSlice({
                 quantity: action.payload.quantity,
                 color: action.payload.color,
                 size: action.payload.size,
+                price: action.payload.price,
                 totalPrice: action.payload.quantity * action.payload.price,
             });
             state.quantity += 1;
@@ -29,14 +29,36 @@ const cartSlice = createSlice({
         refeshProduct: (state) =>{
             state.quantity = 0;
             state.products = [];
+        },
+        decreaseCart: (state, action) =>{
+            const itemIndex = state.products.findIndex(
+                item => item.productId === action.payload.updateProductId
+            );
+            if(state.products[itemIndex].quantity>1){
+                state.products[itemIndex].quantity -= 1;
+                state.products[itemIndex].totalPrice -= state.products[itemIndex].price; 
+            }else if(state.products[itemIndex].quantity === 1){
+                const nextCartItems = state.products.filter(
+                    item => item.productId !== action.payload.updateProductId
+                );
+                state.products=nextCartItems;
+                state.quantity -= 1;
+            }
+        },
+        increaseCart: (state, action) =>{
+            const itemIndex = state.products.findIndex(
+                item => item.productId === action.payload.updateProductId
+            );
+            state.products[itemIndex].quantity += 1;
+            state.products[itemIndex].totalPrice += state.products[itemIndex].price;
         }
     }
 })
 export const getCartItems = state => state.cart.products; 
 export const getTotalPrice = state =>{
     return state.cart.products.reduce((total, product) =>{
-        return product.totalPrice + total;
+        return product?.totalPrice + total;
     },0)
 }
-export const { addProduct, refeshProduct, removeProduct } = cartSlice.actions;
+export const { addProduct, refeshProduct, removeProduct, decreaseCart, increaseCart } = cartSlice.actions;
 export default cartSlice.reducer;
