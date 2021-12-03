@@ -98,6 +98,8 @@ const Order = () => {
                             <select onChange={handleChange} name="status">
                                 <option selected disabled>-- Chọn --</option>
                                 <option value="Approved">Nhận đơn hàng</option>
+                                <option value="Shipping">Đang giao hàng</option>
+                                <option value="Done">Đã nhận hàng</option>
                                 <option value="Declined">Hủy đơn hàng</option>
                             </select>
                             <button className="orderUpdateButton" onClick={handleUpdate}>Xác nhận</button>

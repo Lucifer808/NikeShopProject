@@ -161,6 +161,7 @@ function Product() {
                             name="title" 
                             placeholder={product.title}
                             onChange={handleChange}
+                            required
                         />
                         <label>Mô tả sản phẩm:</label>
                         <TextareaAutosize
@@ -170,6 +171,7 @@ function Product() {
                             placeholder={product.desc}
                             style={{ width: 250, marginBottom: '10px' }}
                             onChange={handleChange}
+                            required
                         />
                         <label>Giá sản phẩm:</label>
                         <input 
@@ -177,6 +179,7 @@ function Product() {
                             name="price" 
                             placeholder={product.price}
                             onChange={handleChange}
+                            required
                         />
                         <label>Màu sản phẩm:</label>
                         <input 
@@ -184,6 +187,7 @@ function Product() {
                             name="color" 
                             placeholder={product.color}
                             onChange={handleColor}
+                            required
                         />
                         <label>Kích cỡ sản phẩm:</label>
                         <input 
@@ -191,6 +195,7 @@ function Product() {
                             name="size" 
                             placeholder={product.size}
                             onChange={handleSize}
+                            required
                         />
                         <label>Phân loại sản phẩm:</label>
                         <input 
@@ -198,6 +203,7 @@ function Product() {
                             name="cate" 
                             placeholder={product.categories}
                             onChange={handleCate}
+                            required
                         />
                         <label>Tồn kho:</label>
                         <select name="inStock" id="idStock" onChange={handleChange}>

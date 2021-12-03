@@ -46,3 +46,11 @@
     background-color: #ebf1fe;
     color: #2a7ade;
 }
+.widgetLgButton.Shipping{
+    background-color: #ebf1fe;
+    color: #b7b91e;
+}
+.widgetLgButton.Done{
+    background-color: #ebf1fe;
+    color: #808488;
+}
