@@ -18,6 +18,7 @@ const cartSlice = createSlice({
                 color: action.payload.color,
                 size: action.payload.size,
                 price: action.payload.price,
+                productQuantity: action.payload.productQuantity,
                 totalPrice: action.payload.quantity * action.payload.price,
             });
             state.quantity += 1;
@@ -49,8 +50,13 @@ const cartSlice = createSlice({
             const itemIndex = state.products.findIndex(
                 item => item.productId === action.payload.updateProductId
             );
-            state.products[itemIndex].quantity += 1;
-            state.products[itemIndex].totalPrice += state.products[itemIndex].price;
+            if(state.products[itemIndex].quantity < state.products[itemIndex].productQuantity){
+                state.products[itemIndex].quantity += 1;
+                state.products[itemIndex].totalPrice += state.products[itemIndex].price;
+            }else{
+                state.products[itemIndex].quantity = 1;
+                state.products[itemIndex].totalPrice = state.products[itemIndex].price;
+            }
         }
     }
 })

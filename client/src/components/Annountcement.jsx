@@ -63,10 +63,12 @@ const Annountcement = () => {
                     }}
                 >
                     <Link to={'/profile/' + currentUser._id} style={{color: '#000', textDecoration: 'none'}}>
-                    <MenuItem onClick={handleClose}><AccountCircleOutlinedIcon style={{fontSize: '22px', marginRight: '2px'}}/>Thông tin cá nhân</MenuItem>
+                        <MenuItem onClick={handleClose}><AccountCircleOutlinedIcon style={{fontSize: '22px', marginRight: '2px'}}/>Thông tin cá nhân</MenuItem>
                     </Link>
-                    <MenuItem onClick={handleClose}><LocalShippingIcon style={{fontSize: '22px', marginRight: '2px'}}/>Lịch sử mua hàng</MenuItem>
-                    <MenuItem onClick={handleClose}><ManageAccountsOutlinedIcon style={{fontSize: '22px', marginRight: '2px'}}/>Thay đổi mật khẩu</MenuItem>
+                    <Link to={'/history/' + currentUser._id} style={{color: '#000', textDecoration: 'none'}}>
+                        <MenuItem onClick={handleClose}><LocalShippingIcon style={{fontSize: '22px', marginRight: '2px'}}/>Lịch sử mua hàng</MenuItem>
+                    </Link>
+                        <MenuItem onClick={handleClose}><ManageAccountsOutlinedIcon style={{fontSize: '22px', marginRight: '2px'}}/>Thay đổi mật khẩu</MenuItem>
                 </Menu>
             </div>
             ) 

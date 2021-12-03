@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Search from "./pages/Search";
 import Profile from "./pages/Profile";
+import History from "./pages/History";
 import {
   BrowserRouter as Router,
   Switch,
@@ -45,6 +46,9 @@ const App = () => {
         </Route>
         <Route path="/profile">
           <Profile />
+        </Route>
+        <Route path="/history">
+          <History />
         </Route>
       </Switch>
     </Router>

@@ -50,13 +50,12 @@ const Price = styled.span `
 const FilterContainer = styled.div `
     margin: 30px 0;
     width: 50%;
-    display: flex;
-    justify-content: space-between;
     ${mobile({flexDirection: "column"})}
 `
 const Filter = styled.div `
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
     ${mobile({margin: "10px 0"})}
 `
 const FilterTitle = styled.span `
@@ -134,6 +133,7 @@ const Product = () => {
         }
         getProduct();
     },[id])
+    console.log(product)
     const handleQuantity = (type) =>{
         if(type==="dec"){
             quantity > 1 && setQuantity(quantity - 1);
@@ -195,12 +195,6 @@ const Product = () => {
                     </Box>
                     <FilterContainer>
                         <Filter>
-                            <FilterTitle>Màu: </FilterTitle>
-                            {product.color?.map(sc =>
-                                <FilterColor color={sc.toLowerCase()} key={sc} onClick={() => setColor(sc)}/>
-                            )}
-                        </Filter>
-                        <Filter>
                             <FilterTitle>Kích cỡ: </FilterTitle>
                             <FilterSize onChange={(e) => setSize(e.target.value)}>
                                 <FilterSizeOption selected disabled>-- Chọn --</FilterSizeOption>
@@ -209,11 +203,20 @@ const Product = () => {
                             )}
                             </FilterSize>
                         </Filter>
+                        <Filter>
+                            <FilterTitle>Màu: </FilterTitle>
+                            {product.color?.map(sc =>
+                                <FilterColor color={sc.toLowerCase()} key={sc} onClick={() => setColor(sc)}/>
+                            )}
+                        </Filter>
+                        <Filter>
+                            <FilterTitle>Tồn kho: {product.productQuantity}</FilterTitle>
+                        </Filter>
                     </FilterContainer>
                     <AddContainer>
                         <AmountContainer>
                             <RemoveIcon onClick={() => handleQuantity("dec")}></RemoveIcon>
-                            <Amount>{quantity}</Amount>
+                            <Amount>{quantity > product.productQuantity ? setQuantity(1): quantity}</Amount>
                             <AddIcon onClick={() => handleQuantity("inc")}></AddIcon>
                         </AmountContainer>
                         <Button onClick={handleClick}>Thêm vào giỏ hàng</Button>
