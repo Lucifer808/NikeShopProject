@@ -37,11 +37,21 @@ router.delete('/:id', authorizationAdmin, async (req, res) =>{
     }
 })
 
-// Get User Order
+// Get Order
 router.get('/find/:id',authorizationAdmin, async (req, res) =>{
     try{
         const order = await Order.findById(req.params.id);
         res.status(200).json(order);
+    }catch(err){
+        res.status(500).json(err);
+    }
+})
+// Get User Order
+router.get('/find/user/:id',authorization, async (req, res) =>{
+    const userId = req.params.id;
+    try{
+        const orderDetail = await Order.find({"userId": userId});
+        res.status(200).json(orderDetail);
     }catch(err){
         res.status(500).json(err);
     }
