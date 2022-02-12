@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, forwardRef} from 'react';
 import styled from 'styled-components';
 import Annountcement from '../components/Annountcement';
 import Footer from '../components/Footer';
@@ -14,6 +14,13 @@ import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
 import Trending from '../components/Trending';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
 const Container = styled.div ``
 const Wrapper = styled.div `
     padding: 50px;
@@ -101,7 +108,7 @@ const Amount = styled.div `
     justify-content: center;
     margin: 0 5px;
 `
-const Button = styled.button `
+const ButtonStyled = styled.button `
     padding: 10px;
     border: 1px solid teal;
     background-color: teal;
@@ -114,7 +121,14 @@ const Button = styled.button `
     }
     ${mobile({width: "100%", marginTop: "10px"})}
 `
+const Transition = forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
 const Product = () => {
+    const [open, setOpen] = useState(false);
+    const handleClose = () => {
+        setOpen(false);
+    };
     const location = useLocation();
     const id = location.pathname.split('/')[2];
     const [product, setProduct] = useState({});
@@ -133,7 +147,6 @@ const Product = () => {
         }
         getProduct();
     },[id])
-    console.log(product)
     const handleQuantity = (type) =>{
         if(type==="dec"){
             quantity > 1 && setQuantity(quantity - 1);
@@ -216,11 +229,29 @@ const Product = () => {
                     <AddContainer>
                         <AmountContainer>
                             <RemoveIcon onClick={() => handleQuantity("dec")}></RemoveIcon>
-                            <Amount>{quantity > product.productQuantity ? setQuantity(1): quantity}</Amount>
+                            <Amount>{quantity > product.productQuantity ? setQuantity(1) : quantity}</Amount>
+                            {quantity > product.productQuantity ? setOpen(true) : ""}
                             <AddIcon onClick={() => handleQuantity("inc")}></AddIcon>
                         </AmountContainer>
-                        <Button onClick={handleClick}>Thêm vào giỏ hàng</Button>
+                        <ButtonStyled onClick={handleClick}>Thêm vào giỏ hàng</ButtonStyled>
                     </AddContainer>
+                    <Dialog
+                                open={open}
+                                TransitionComponent={Transition}
+                                keepMounted
+                                onClose={handleClose}
+                                aria-describedby="alert-dialog-slide-description"
+                            >
+                                <DialogTitle>{"Số lượng không hợp lệ"}</DialogTitle>
+                                <DialogContent>
+                                <DialogContentText id="alert-dialog-slide-description">
+                                    Số lượng mua không thể vượt số lượng hàng tồn. Vui lòng chọn lại !
+                                </DialogContentText>
+                                </DialogContent>
+                                <DialogActions>
+                                <Button onClick={handleClose}>Thoát</Button>
+                                </DialogActions>
+                            </Dialog>
                 </InfoContainer>
             </Wrapper>
             <Trending />

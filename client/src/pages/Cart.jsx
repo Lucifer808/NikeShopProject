@@ -140,7 +140,7 @@ const ButtonPayment = styled.button `
 `
 const Transition = forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
-  });
+});
 const Cart = () => {
     const [open, setOpen] = useState(false);
 
