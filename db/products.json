@@ -1,0 +1,1127 @@
+[{
+  "_id": {
+    "$oid": "616520f39f9cc31f3c9e2add"
+  },
+  "title": "Nike Flex Stride",
+  "desc": "The Nike Flex Stride Shorts get updated with an all-new woven fabric and enhanced breathability in high-sweat areas.Their 2-in-1 design has a soft liner for support where you need it.This product is made from at least 50% recycled polyester fibres.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635224139812flex-stride-18cm-2-in-1-running-shorts-kkKFDX.jpg?alt=media&token=1139572f-28bd-467e-a54a-e495761e792b",
+  "categories": [
+    "shorts",
+    "men"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+  ],
+  "color": [
+    "Black"
+  ],
+  "price": 1379000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-12T05:45:23.519Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-26T04:55:43.142Z"
+  },
+  "__v": 0,
+  "productQuantity": 10
+},{
+  "_id": {
+    "$oid": "61652770773965355fc97ac5"
+  },
+  "title": "Jordan Essentials",
+  "desc": "Make the Jordan Essentials Shorts your go-to pair.Made from brushed French terry, they have a relaxed fit and a secure, adjustable waistband.They're authenticated with MJ's embroidered signature.",
+  "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/60be0b3a-c2b1-4f17-8f00-73b7f70431dd/jordan-essentials-fleece-shorts-rJ9Ngf.png",
+  "categories": [
+    "shorts",
+    "men"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "White",
+    "Red"
+  ],
+  "price": 1019000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-12T06:13:04.688Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-12T06:13:04.688Z"
+  },
+  "__v": 0,
+  "productQuantity": 30
+},{
+  "_id": {
+    "$oid": "616527de773965355fc97ac7"
+  },
+  "title": "Nike Dri-FIT Challenger Run Division",
+  "desc": "We took a favourite and geared it for darker days and cooler weather with reflective design details.The Nike Run Division Challenger Shorts are still light and smooth with a built-in brief for support.They hold your phone in a pocket at the back.This product is made from at least 75% recycled polyester fibres.",
+  "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7127b4ac-1a8a-4093-9ebd-2062568684cc/dri-fit-challenger-run-division-13cm-brief-lined-running-shorts-28Dps0.png",
+  "categories": [
+    "shorts",
+    "men"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "White",
+    "Blue"
+  ],
+  "price": 1019000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-12T06:14:54.206Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-12T06:14:54.206Z"
+  },
+  "__v": 0,
+  "productQuantity": 10
+},{
+  "_id": {
+    "$oid": "61652842773965355fc97ac9"
+  },
+  "title": "Jordan Sport DNA",
+  "desc": "The Jordan Sport DNA T-Shirt is an everyday long-sleeve staple made from soft, comfortable cotton.A large graphic on the back riffs on the chain-link fences from outdoor courts.",
+  "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e4ce5ac0-26d3-42e3-b8d9-4af3eaa021d3/jordan-sport-dna-long-sleeve-t-shirt-hlkM7d.png",
+  "categories": [
+    "t-shirt",
+    "men"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "White",
+    "Black"
+  ],
+  "price": 1019000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-12T06:16:34.774Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-12T06:16:34.774Z"
+  },
+  "__v": 0,
+  "productQuantity": 20
+},{
+  "_id": {
+    "$oid": "61652898773965355fc97acb"
+  },
+  "title": "Nike Sportswear Essentials+",
+  "desc": "The Nike Sportswear Essentials+ Shorts refresh a fleece favourite with a bouquet of Nike graphics.Embroidered on soft, brushed French terry, these scattered graphics add texture and a variety of colours to help accent your favourite sneakers.",
+  "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0c8a6334-93d9-4168-baf2-01335a3d18a1/sportswear-essentials-french-terry-shorts-mv00Sf.png",
+  "categories": [
+    "shorts",
+    "men"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Black",
+    "Blue"
+  ],
+  "price": 1279000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-12T06:18:00.190Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-12T06:18:00.190Z"
+  },
+  "__v": 0,
+  "productQuantity": 15
+},{
+  "_id": {
+    "$oid": "61652909773965355fc97acd"
+  },
+  "title": "Nike Sportswear Alien Air",
+  "desc": "The Nike Sportswear T-Shirt is made with a classic fit and our everyday cotton for a familiar feel right out of the bag.An out-of-this-world illustration sends the printed graphics into the next dimension.",
+  "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7885a862-6b75-4266-b48a-ec34a9a9fb69/sportswear-alien-air-t-shirt-K611lZ.png",
+  "categories": [
+    "t-shirt",
+    "men"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Black",
+    "Blue"
+  ],
+  "price": 819000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-12T06:19:53.408Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-12T06:19:53.408Z"
+  },
+  "__v": 0,
+  "productQuantity": 25
+},{
+  "_id": {
+    "$oid": "61656a72fadec2152a4b6188"
+  },
+  "title": "Jordan Jumpman Box",
+  "desc": "Represent a legacy of extraordinary hops. The Jordan Jumpman Box T-Shirt features fresh brand graphics and the soft, comfortable feel of cotton.",
+  "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/efd1317b-029c-4a98-b3a6-5c61ec44971a/jordan-jumpman-box-short-sleeve-t-shirt-dG2kpP.png",
+  "categories": [
+    "t-shirt",
+    "men"
+  ],
+  "size": [
+    "S",
+    "M"
+  ],
+  "color": [
+    "Black",
+    "White"
+  ],
+  "price": 659000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-12T10:58:58.110Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-12T10:58:58.110Z"
+  },
+  "__v": 0,
+  "productQuantity": 18
+},{
+  "_id": {
+    "$oid": "61656ae1fadec2152a4b618b"
+  },
+  "title": "Nike Sportswear",
+  "desc": "Made in our classic fit and everyday cotton fabric, the Nike Sportswear Keep It Clean T-Shirt has a soft, familiar feel perfect for everyday wear.Inspired by the sudsy styling of retro detergent packaging, the graphic offers a fresh look for fresh outfits.",
+  "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/60351a65-269e-41fc-b932-5a5093d811c0/sportswear-t-shirt-xWnS7N.png",
+  "categories": [
+    "t-shirt",
+    "men"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L"
+  ],
+  "color": [
+    "Black",
+    "Red"
+  ],
+  "price": 919000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-12T11:00:49.543Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-12T11:00:49.543Z"
+  },
+  "__v": 0,
+  "productQuantity": 25
+},{
+  "_id": {
+    "$oid": "617a5759ecaaccf6da7bf049"
+  },
+  "title": "Nike Air",
+  "desc": "The Nike Air Top is a roomy silhouette made from organic cotton.Its Air graphic has a reflective fill and printed outline to help your look shine.An embroidered Futura Air graphic on the sleeve adds texture to the smooth feel of this carefree, cotton tee.This product is made from at least 75% organic cotton fibres.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635407701861air-top-NWDVrT.jpg?alt=media&token=79a96d30-1e7d-44dc-9fc7-5682ed5cfece",
+  "categories": [
+    "top",
+    "women"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "orange"
+  ],
+  "price": 1019000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-28T07:55:05.434Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-28T07:55:05.434Z"
+  },
+  "__v": 0,
+  "productQuantity": 28
+},{
+  "_id": {
+    "$oid": "617d60b16971dc0192397fc9"
+  },
+  "title": "Nike Dri-FIT Run Division",
+  "desc": "The Nike Dri-FIT Run Division Top delivers a short-sleeve design that can be worn before, during or after you run.It easily packs away with the help of a bungee cord for simple carrying.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635606703378dri-fit-run-division-short-sleeve-running-top-JJVgjX.jpg?alt=media&token=7af44be2-ea9c-4899-9b98-54b997e0c0c4",
+  "categories": [
+    "t-shirt",
+    "women"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "XL"
+  ],
+  "color": [
+    "Black",
+    "Pink",
+    "Purple"
+  ],
+  "price": 919000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T15:11:45.348Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T15:11:45.348Z"
+  },
+  "__v": 0,
+  "productQuantity": 20
+},{
+  "_id": {
+    "$oid": "617d61536971dc0192397fcc"
+  },
+  "title": "Nike Dri-FIT Run Division Fast",
+  "desc": "An essential gets remixed for the winter months.The Nike Dri-FIT Run Division Fast Leggings help make your cool-weather miles count with sweat-wicking technology and soft fabric.Stretchy and supportive, they use an adjustable, mid-rise waistband for a comfortable feel on the go.Convenient pockets keep essentials close.This product is made from at least 50% recycled polyester fibres.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635606865555dri-fit-run-division-fast-running-leggings-gVTddN.jpg?alt=media&token=f948a8e2-e5ef-4f64-a099-925e2eb9f273",
+  "categories": [
+    "legging",
+    "women",
+    "running"
+  ],
+  "size": [
+    "X",
+    "S",
+    "M",
+    "L"
+  ],
+  "color": [
+    "Purple"
+  ],
+  "price": 1739000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T15:14:27.435Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T15:14:27.435Z"
+  },
+  "__v": 0,
+  "productQuantity": 32
+},{
+  "_id": {
+    "$oid": "617d62386971dc0192397fcf"
+  },
+  "title": "Nike Sportswear Swoosh",
+  "desc": "Step into the Nike Sportswear Swoosh Leggings to bring a competitive edge to your everyday style.Made from a soft knit fabric, you'll want to keep these in heavy rotation.The high-waisted design hugs your body, plus stretchy fabric that moves with you throughout the day.With a mirrored Swoosh designs above the knee, complete your sporty look with your favourite tee and sneakers.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635607094419sportswear-swoosh-leggings-TlHr6n.jpg?alt=media&token=944e2451-e4dc-4ad8-96c4-832c545c85ba",
+  "categories": [
+    "legging",
+    "women",
+    "running"
+  ],
+  "size": [
+    "X",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Purple"
+  ],
+  "price": 1119000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T15:18:16.907Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T15:18:16.907Z"
+  },
+  "__v": 0,
+  "productQuantity": 28
+},{
+  "_id": {
+    "$oid": "617d66a56971dc0192397fe8"
+  },
+  "title": "Nike Yoga Dri-FIT",
+  "desc": "The Nike Yoga Dri-FIT Leggings wrap you in the supportive comfort of stretchy fabric that feels soft against your skin.The high waist hugs your core to keep you confidently covered through every pose.Metallic trim offers a touch of radiance.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635608227858yoga-dri-fit-high-waisted-7-8-metallic-trim-leggings-Tc7q4g.jpg?alt=media&token=2af0f69e-f112-4c9c-98c1-d01bfad2f502",
+  "categories": [
+    "legging",
+    "women"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Black",
+    "Red"
+  ],
+  "price": 1479000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T15:37:09.396Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T15:37:09.396Z"
+  },
+  "__v": 0,
+  "productQuantity": 26
+},{
+  "_id": {
+    "$oid": "617d6b4b1a443c39df6cff9e"
+  },
+  "title": "Women's Fleece Full-Zip Hoodie",
+  "desc": "Give yourself extra room to relax in this full-zip hoodie.Incredibly soft fleece and a roomy fit offer a casual feel and plenty of comfort.A zip and ribbed details make this an easy-to-layer piece perfect for everyday wear, while an animal print logo accented with a metallic outline helps it stand out just enough.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635609416983sportswear-fleece-hoodie-V6C34R.jpg?alt=media&token=d4010cae-fa71-4a13-8995-e3c34c2e6780",
+  "categories": [
+    "hoddie",
+    "women"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L"
+  ],
+  "color": [
+    "Black"
+  ],
+  "price": 1579000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T15:56:59.110Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T15:56:59.110Z"
+  },
+  "__v": 0,
+  "productQuantity": 28
+},{
+  "_id": {
+    "$oid": "617d6ba01a443c39df6cffa1"
+  },
+  "title": "Women's Long-Sleeve Running Top",
+  "desc": "Suit up with the sweat-wicking warmth of the Nike Dri-FIT Run Division Top.This long-sleeve design has a soft feel and uses thumbholes for extended coverage.Mixed materials on the front are highlighted with reflective design elements.Wear this one solo or pair it with other Run Division styles for an ensemble that'll light up your route.This product is made from at least 75% recycled polyester fibres.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635609502019dri-fit-run-division-long-sleeve-running-top-DGhFDk.jpg?alt=media&token=09913196-13f0-48ce-8ebb-33d90a1ae9dd",
+  "categories": [
+    "running",
+    "top",
+    "women"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Brown"
+  ],
+  "price": 1479000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T15:58:24.344Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T15:58:24.344Z"
+  },
+  "__v": 0,
+  "productQuantity": 32
+},{
+  "_id": {
+    "$oid": "617d6c331a443c39df6cffa4"
+  },
+  "title": "Women's Mid-Rise Crop Running Leggings",
+  "desc": "Make those miles count in the Nike Fast Leggings.Stretchy materials and a supportive design combine with ventilation where you need it for cooling on the move.Plenty of pockets offer essential storage on the go.This product is made from at least 50% recycled polyester fibres.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635609650098epic-fast-mid-rise-crop-running-leggings-w8QsNX.jpg?alt=media&token=ef61e6ac-7101-468e-92e1-1c98f6514b0d",
+  "categories": [
+    "running",
+    "women"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L"
+  ],
+  "color": [
+    "Red",
+    "Brown"
+  ],
+  "price": 1279000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T16:00:51.970Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T16:00:51.970Z"
+  },
+  "__v": 0,
+  "productQuantity": 24
+},{
+  "_id": {
+    "$oid": "617d6d6b1a443c39df6cffa7"
+  },
+  "title": "Older Kids' Jacket",
+  "desc": "The Tune Squad is ready to play!Rep your favourite animated hoops team with the Nike Jacket to celebrate the release of your new favourite sports and family adventure movie, Space Jam: A New Legacy.This letterman's style jacket features a woven shell, press studs and light synthetic fill for a premium feel with every wear.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635609961448space-jam-a-new-legacy-older-jacket-Dl590z.jpg?alt=media&token=32c2bfb0-1c5d-4997-8a9a-df9b10ea365e",
+  "categories": [
+    "jacket",
+    "kids"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Black"
+  ],
+  "price": 2598999,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T16:06:03.284Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T16:06:03.284Z"
+  },
+  "__v": 0,
+  "productQuantity": 20
+},{
+  "_id": {
+    "$oid": "617d6def1a443c39df6cffaa"
+  },
+  "title": "Older Kids' DNA Basketball Jersey",
+  "desc": "The Nike Jersey celebrates the release of your new favourite sports and family adventure movie, Space Jam: A New Legacy.This jersey is reversible and made from super-breathable mesh so you can shoot hoops and play like your favourite character.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635610092289space-jam-a-new-legacy-older-dna-basketball-jersey-6j2qxz.jpg?alt=media&token=4516ed32-1289-4f19-b2b7-185d32613d84",
+  "categories": [
+    "basketball",
+    "kids"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Blue",
+    ""
+  ],
+  "price": 1069000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T16:08:15.811Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T16:08:15.811Z"
+  },
+  "__v": 0,
+  "productQuantity": 21
+},{
+  "_id": {
+    "$oid": "617d6e591a443c39df6cffad"
+  },
+  "title": "Older Kids' (Boys') Long-Sleeve Training Top",
+  "desc": "From playing ball games to climbing at the playground, the Nike Dri-FIT Top has you covered.This active top is breathable and wicks away sweat, so going all out is no problem.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635610199376dri-fit-older-long-sleeve-training-top-RxZ0gG.jpg?alt=media&token=d27cbb1c-66fe-4c85-b3a6-13b45f1e1b57",
+  "categories": [
+    "trainning",
+    "kids"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Blue",
+    "Black"
+  ],
+  "price": 769000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T16:10:01.306Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T16:10:01.306Z"
+  },
+  "__v": 0,
+  "productQuantity": 32
+},{
+  "_id": {
+    "$oid": "617d6eec1a443c39df6cffb0"
+  },
+  "title": "Older Kids' (Boys') Short-Sleeve Training Top",
+  "desc": "The Nike Dri-FIT Top has lightweight mesh fabric with sweat-wicking technology to help keep you cool and dry.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635610346000dri-fit-older-short-sleeve-training-top-nMmPXp.jpg?alt=media&token=1c5da449-142c-4eff-aa93-73d2251e63fe",
+  "categories": [
+    "trainning",
+    "kids"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Black",
+    "White",
+    "Blue"
+  ],
+  "price": 409000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T16:12:28.521Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T16:12:28.521Z"
+  },
+  "__v": 0,
+  "productQuantity": 28
+},{
+  "_id": {
+    "$oid": "617d6f581a443c39df6cffb3"
+  },
+  "title": "Older Kids' (Girls') Crop Jacket",
+  "desc": "For cool-weather adventurers, the velvety Nike Air Jacket keeps you wrapped up with lightweight warmth.The length falls near your hips for easy layering, while the print reps your love for everything Air all day, any day.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635610453331air-older-crop-jacket-8H9nnC.jpg?alt=media&token=e07ebc74-43b0-43b3-a3c0-9f669a1cd722",
+  "categories": [
+    "jacket",
+    "kids"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L"
+  ],
+  "color": [],
+  "price": 1629000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T16:14:16.855Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T16:14:16.855Z"
+  },
+  "__v": 0,
+  "productQuantity": 24
+},{
+  "_id": {
+    "$oid": "617d6fd61a443c39df6cffb6"
+  },
+  "title": "Older Kids' (Girls') 15cm (approx.) Training Shorts",
+  "desc": "The Nike Dri-FIT Trophy Shorts are ready for all kinds of fun.Lightweight and sweat-wicking, the help you stay comfortable while you run and play.Plus, the waistband has Swoosh-tastic style.This product is made from 100% recycled polyester fibres.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635610579724dri-fit-trophy-older-15cm-training-shorts-XlZLNv.jpg?alt=media&token=5006f096-7f32-4245-8726-f9f8b0be98e8",
+  "categories": [
+    "trainning",
+    "kids"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Blue",
+    "Pink"
+  ],
+  "price": 409000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T16:16:22.357Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T16:16:22.357Z"
+  },
+  "__v": 0,
+  "productQuantity": 16
+},{
+  "_id": {
+    "$oid": "617d702b1a443c39df6cffb9"
+  },
+  "title": "Older Kids' (Girls') High-Rise Capri Leggings",
+  "desc": "Ready for playing or practice—the Nike Dri-FIT One Leggings are our most versatile leggings.The super-comfortable design wicks sweat to help keep you dry and a shorter length can be worn in warm and cool conditions.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635610665297dri-fit-one-older-high-rise-capri-leggings-31c3Kf.jpg?alt=media&token=c0bdba84-abb9-4db6-8c48-7d4129ae0e47",
+  "categories": [
+    "legging",
+    "kids"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L"
+  ],
+  "color": [
+    "Pink"
+  ],
+  "price": 461000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T16:17:47.199Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T16:17:47.199Z"
+  },
+  "__v": 0,
+  "productQuantity": 28
+},{
+  "_id": {
+    "$oid": "617d70811a443c39df6cffbc"
+  },
+  "title": "Older Kids' (Girls') Printed Fleece Hoodie",
+  "desc": "The Nike Sportswear Hoodie is made from lightweight, super-soft fleece for an easy go-to layer. Cool curved hems and Swoosh-tastic style—we're so in.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1635610751743sportswear-older-printed-fleece-hoodie-MHtxhK.jpg?alt=media&token=da44e016-47d2-4ce8-98db-19c217dd4d7f",
+  "categories": [
+    "hoddie",
+    "kids"
+  ],
+  "size": [
+    "XS",
+    "X",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Pink"
+  ],
+  "price": 1069000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-10-30T16:19:13.269Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T16:19:13.269Z"
+  },
+  "__v": 0,
+  "productQuantity": 20
+},{
+  "_id": {
+    "$oid": "6195c4f51a52141e21122d60"
+  },
+  "title": "Nike Solo Swoosh",
+  "desc": "A classic never goes out of style.Heavyweight fabric is mixed with a loose fit for a premium look and feel.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637208661846solo-swoosh-t-shirt-2CFK7L.jpg?alt=media&token=87c7ee65-d76b-4441-90c4-c6633c09f646",
+  "categories": [
+    "men",
+    "t-shirt"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "White",
+    "Black"
+  ],
+  "price": 919000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T03:13:57.772Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:11:04.185Z"
+  },
+  "__v": 0,
+  "productQuantity": 24
+},{
+  "_id": {
+    "$oid": "6195d19b3c37cd032f06d9f7"
+  },
+  "title": "Nike Sportswear's",
+  "desc": "Made from cotton and featuring a classic fit, this T-shirt has repeated and layered embroidered graphics that bring new life to a Nike staple.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637208472537sportswear-t-shirt-RkpSBq.jpg?alt=media&token=f0929ba3-e111-48f1-825c-8e5e0df890b9",
+  "categories": [
+    "t-shirt",
+    "men"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL"
+  ],
+  "color": [
+    "Darkslategray",
+    "Black",
+    "Red"
+  ],
+  "price": 819000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:07:55.265Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:07:55.265Z"
+  },
+  "__v": 0,
+  "productQuantity": 26
+},{
+  "_id": {
+    "$oid": "6195d34a3c37cd032f06da3a"
+  },
+  "title": "Nike Dri-FIT Nathan Bell",
+  "desc": "The Nike Dri-FIT Nathan Bell T-Shirt is part of a collaboration with artist Nathan Bell, which celebrates running as a competition with yourself. It combines sweat-wicking fabric with hand-drawn graphics for a playful touch to your route.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637208903867dri-fit-nathan-bell-running-t-shirt-0Hj5NW.jpg?alt=media&token=5af02eb7-67e7-4792-9bf0-7ae1c89a0196",
+  "categories": [
+    "t-shirt",
+    "men"
+  ],
+  "size": [
+    "S",
+    "X",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Gainsboro",
+    "Black"
+  ],
+  "price": 819000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:15:06.724Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:15:06.724Z"
+  },
+  "__v": 0,
+  "productQuantity": 20
+},{
+  "_id": {
+    "$oid": "6195d39c3c37cd032f06da3d"
+  },
+  "title": "Nike SB",
+  "desc": "Firry the Tree has taken a break from his mellow vigil above the snowy landscape so he can join in on your festive cheer.The Nike SB T-Shirt brings Firry to your festivities on this casual favourite made from midweight cotton.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637208985751sb-skate-t-shirt-HMgngZ.jpg?alt=media&token=3e86f8c0-42f7-426a-9278-06f692071050",
+  "categories": [
+    "t-shirt",
+    "men"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Black",
+    "White"
+  ],
+  "price": 659000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:16:28.265Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:16:28.265Z"
+  },
+  "__v": 0,
+  "productQuantity": 32
+},{
+  "_id": {
+    "$oid": "6195d4723c37cd032f06da40"
+  },
+  "title": "Nike Sportswear Icon Clash",
+  "desc": "The Nike Sportswear Long-Sleeve Top is a slim-fitting layer with a sophisticated look perfect for warming up your wardrobe.The all-over Swoosh print puts a fresh spin on the classic turtleneck design.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637209392867sportswear-icon-clash-mock-long-sleeve-top-TlH8QM.jpg?alt=media&token=a59df809-9700-4b86-9c67-19ae5ed15f3f",
+  "categories": [
+    "top",
+    "long-sleeve",
+    "women"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+  ],
+  "color": [
+    "Paleturquoise"
+  ],
+  "price": 1379000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:20:02.388Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:23:15.158Z"
+  },
+  "__v": 0,
+  "productQuantity": 25
+},{
+  "_id": {
+    "$oid": "6195d6c73c37cd032f06da4e"
+  },
+  "title": "Nike Sportswear Essential",
+  "desc": "The Nike Sportswear Leggings are a wardrobe essential that pair well with your favourite tops and tees. A Swoosh print on the calf lets you rep the brand in style.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637209796748sportswear-essential-mid-rise-swoosh-leggings-5d2H80.jpg?alt=media&token=24b9f252-b253-4f13-ac36-cd7e783d539c",
+  "categories": [
+    "women",
+    "legging"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Black"
+  ],
+  "price": 1019000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:29:59.343Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:29:59.343Z"
+  },
+  "__v": 0,
+  "productQuantity": 25
+},{
+  "_id": {
+    "$oid": "6195d7853c37cd032f06da52"
+  },
+  "title": "Women's Velour 1/4-Zip Long-Sleeve",
+  "desc": "An elegant spin on a classic staple, the Nike Air 1/4-Zip Top is made from soft velour fabric covered in an all-over-embossed Nike Air pattern. Its tight fit features a modest crop that falls at your hips for a carefree look that's both fun and functional.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637209986575air-velour-1-4-zip-long-sleeve-top-Z5DkKm.jpg?alt=media&token=85d1bffd-3e2e-4b22-8a80-ff7e2cfd40be",
+  "categories": [
+    "women",
+    "top",
+    "long-sleeve"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Saddlebrown",
+    "Black"
+  ],
+  "price": 1479000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:33:09.015Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:33:09.015Z"
+  },
+  "__v": 0,
+  "productQuantity": 30
+},{
+  "_id": {
+    "$oid": "6195d8503c37cd032f06da55"
+  },
+  "title": "Women's Boyfriend-Fit",
+  "desc": "Carefree and confident, the Nike Sportswear T-Shirt is made with a roomy cut and mid-weight cotton jersey.A raised cheetah print scampering off the shoulder adds a soft texture that's accented by a contrasting Nike logo.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637210190631sportswear-boyfriend-fit-t-shirt-dd3FGb.jpg?alt=media&token=996bf3ef-03af-4b4c-9da4-b2c77f845e94",
+  "categories": [
+    "t-shirt",
+    "women"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L"
+  ],
+  "color": [
+    "Black",
+    "White"
+  ],
+  "price": 819000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:36:32.987Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:36:32.987Z"
+  },
+  "__v": 0,
+  "productQuantity": 24
+},{
+  "_id": {
+    "$oid": "6195d9e53c37cd032f06da58"
+  },
+  "title": "Older Kids' Short-Sleeve Football",
+  "desc": "The Nike Top has a camo print on sweat-wicking fabric to help keep you dry when your training heats up. This product is made from 100% recycled polyester fibres.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637210594403older-short-sleeve-football-top-qKnsBF.jpg?alt=media&token=3cff5289-7233-402f-89f5-e9e80c0c4dc3",
+  "categories": [
+    "top",
+    "sport",
+    "football",
+    "kids"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Blue"
+  ],
+  "price": 509000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:43:17.698Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:43:17.698Z"
+  },
+  "__v": 0,
+  "productQuantity": 26
+},{
+  "_id": {
+    "$oid": "6195da4c3c37cd032f06da5b"
+  },
+  "title": "Nike Dri-FIT Miler",
+  "desc": "Get ready to kick it into high gear in the Nike Dri-FIT Miler Top.Breathable fabric and Dri-FIT Technology help keep you cool and dry when you're playing hard.This product is made from at least 50% recycled polyester fibres.",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637210698265dri-fit-miler-older-training-top-ddfMq2.jpg?alt=media&token=563fd63b-93fc-4585-9d0d-8ef45f8bf22b",
+  "categories": [
+    "top",
+    "training",
+    "kids"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Black",
+    "Blue"
+  ],
+  "price": 659000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:45:00.725Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:45:00.725Z"
+  },
+  "__v": 0,
+  "productQuantity": 21
+},{
+  "_id": {
+    "$oid": "6195dac73c37cd032f06da5e"
+  },
+  "title": "Older Kids' (Girls') Crop",
+  "desc": "Fans of cropped tees will love the Nike Sportswear T-Shirt.Still soft and comfy like your standby tee, we've now added a magical \"Nike Air\" graphic that transforms into rainbow reflective-design colours under light.So awesome!",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1637210821618sportswear-older-crop-t-shirt-Xcgp1h.jpg?alt=media&token=fd903db2-82a2-4b00-ab75-1715422ef5b6",
+  "categories": [
+    "t-shirt",
+    "crop",
+    "kids"
+  ],
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Pink"
+  ],
+  "price": 509000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:47:03.958Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T04:47:03.958Z"
+  },
+  "__v": 0,
+  "productQuantity": 20
+},{
+  "_id": {
+    "$oid": "6195db973c37cd032f06da61"
+  },
+  "title": "Nike Sportswear x Space Jam: A New Legacy",
+  "desc": "The Nike Sportswear T-Shirt reps a new chapter with graphics featuring your favourite cartoon rabbit playing basketball in Space Jam: A New Legacy.It's game times!",
+  "img": "https://firebasestorage.googleapis.com/v0/b/nikeshop-adebc.appspot.com/o/1638509444636sportswear-space-jam-a-new-legacy-older-t-shirt-FLMdtx.jpg?alt=media&token=7dc9e9a1-4862-43a5-8772-d51cb1839fac",
+  "categories": [
+    "t-shirt",
+    "kids"
+  ],
+  "size": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "color": [
+    "Blue",
+    "White",
+    "Black"
+  ],
+  "price": 527000,
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-18T04:50:31.655Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-03T05:30:47.629Z"
+  },
+  "__v": 0,
+  "productQuantity": 28
+}]

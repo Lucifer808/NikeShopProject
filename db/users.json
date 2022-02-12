@@ -1,0 +1,214 @@
+[{
+  "_id": {
+    "$oid": "616d87d4c1a56f1a995251c4"
+  },
+  "name": "QTV",
+  "username": "admin",
+  "email": "admin@gmail.com",
+  "password": "U2FsdGVkX1+O8fzNC6H+CZJJH4E/Yn2sNsPteMFNLBc=",
+  "isAdmin": true,
+  "createdAt": {
+    "$date": "2021-07-18T14:42:28.474Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-03T05:10:46.749Z"
+  },
+  "__v": 0,
+  "address": "Soc Trang",
+  "dayOfBirth": "01/12/2001",
+  "phone": "0945630115"
+},{
+  "_id": {
+    "$oid": "6176df68b5679910f9c72e26"
+  },
+  "name": "Test name",
+  "username": "test6",
+  "email": "test6@gmail.com",
+  "password": "U2FsdGVkX18C8Sx7tyILP67PkKpyOBAVEJhzmMTwRCg=",
+  "dayOfBirth": "01/12/2001",
+  "phone": "094242421231",
+  "address": "CanThoCity",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2021-09-25T16:46:32.721Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-25T16:46:32.721Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617d5c036971dc0192397fa3"
+  },
+  "name": "Tinh Nguyen",
+  "username": "test5",
+  "email": "test5@email.com",
+  "password": "U2FsdGVkX1/Tr4lWTObWW9dpR9hX+5Z7IAXF1i3uK/s=",
+  "dayOfBirth": "02/12/1999",
+  "phone": "094268433",
+  "address": "SocTrang",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2021-08-30T14:51:47.666Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T14:51:47.666Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617d5c3e6971dc0192397fa7"
+  },
+  "name": "Duy Nguyen",
+  "username": "qtv",
+  "email": "duynguyen@email.com",
+  "password": "U2FsdGVkX18dRhzIAtDG+OnpEsZTWSpjazY5rSpVsyk=",
+  "dayOfBirth": "01/12/2000",
+  "phone": "094268433",
+  "address": "SocTrang",
+  "isAdmin": true,
+  "createdAt": {
+    "$date": "2021-10-30T14:52:46.229Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-30T14:52:46.229Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617e9fc4ed935cda700ee4f8"
+  },
+  "name": "Huy Nguyen",
+  "username": "test4",
+  "email": "tes4@gmail.com",
+  "password": "U2FsdGVkX19YiGFsGkrKSa6duSiaRnHmeGQi0tRXIZs=",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2021-10-31T13:53:08.773Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-31T13:53:08.773Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617ea01aed935cda700ee4fc"
+  },
+  "name": "Hoang Nguyen",
+  "username": "test3",
+  "email": "test3@gmail.com",
+  "password": "U2FsdGVkX1/PfJyLobL/9vgRm4Kc5yLIV7epdxHvLlQ=",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2021-08-31T13:54:34.854Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-31T13:54:34.854Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617ea0ceed935cda700ee4fe"
+  },
+  "name": "Khoa Nguyen",
+  "username": "test2",
+  "email": "test2@gmail.com",
+  "password": "U2FsdGVkX19NOQ0mLXbPXWMJNZDHyFCaZx7Xstrjdsk=",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2021-10-31T13:57:34.408Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-31T13:57:34.408Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617ea1a5ed935cda700ee502"
+  },
+  "name": "Toan Nguyen",
+  "username": "test1",
+  "email": "test1@gmail.com",
+  "password": "U2FsdGVkX19dup6QLwlPWoR1VPs9tqIXU8IjcwGWt1g=",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2021-10-31T14:01:09.805Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-08T10:59:17.140Z"
+  },
+  "__v": 0,
+  "dayOfBirth": "01/12/2000",
+  "phone": "0942654314",
+  "address": "Kien Giang"
+},{
+  "_id": {
+    "$oid": "617ea258ed935cda700ee504"
+  },
+  "name": "Duy Nguyen",
+  "username": "test7",
+  "email": "test7@gmail.com",
+  "password": "U2FsdGVkX1+4sgKPqmxP++UXMvGD6x0yc9J3oCcvKps=",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2021-08-31T14:04:08.074Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-31T14:04:08.074Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617ea28fed935cda700ee506"
+  },
+  "name": "Duy Nguyen",
+  "username": "test8",
+  "email": "test8@gmail.com",
+  "password": "U2FsdGVkX1/ToAaIaRMiE75p8XBdbGa6eHDsRl0rdMI=",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2021-10-31T14:05:03.563Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-31T14:05:03.563Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6195defe3c37cd032f06da9b"
+  },
+  "name": "Duy Tran",
+  "username": "test12",
+  "email": "test12@gmail.com",
+  "password": "U2FsdGVkX1/JNOt5nS3DCzzToDO7pVHfP5KXhYkYOHc=",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2021-11-18T05:05:02.694Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T05:12:49.559Z"
+  },
+  "__v": 0,
+  "address": "Can Tho",
+  "dayOfBirth": "01/12/2001",
+  "phone": "0942428207"
+},{
+  "_id": {
+    "$oid": "61a9a45406807661a85046e5"
+  },
+  "name": "Duy Nguyen",
+  "username": "testt1",
+  "email": "test112@gmail.com",
+  "password": "U2FsdGVkX1855j4nAxruVvMgthxFVW4s42ZrWeO+8xE=",
+  "dayOfBirth": "01/12/2000",
+  "phone": "0678545213",
+  "address": "Soc Trang",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2021-12-03T05:00:04.717Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-03T05:00:04.717Z"
+  },
+  "__v": 0
+}]
