@@ -6,6 +6,7 @@ import { getOrders } from '../../redux/apiCalls';
 import { useDispatch, useSelector} from 'react-redux';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { deleteOrder } from '../../redux/apiCalls';
+import EditIcon from '@mui/icons-material/Edit';
 const OrdersList = () => {
     const dispatch = useDispatch();
     const orders = useSelector((state) => state.order.orders);
@@ -30,7 +31,7 @@ const OrdersList = () => {
                 return (
                     <>
                     <Link to={"/order/" + params.row._id}>
-                    <button className="ordersListEdit">Edit</button>
+                    <EditIcon className="ordersListEdit"></EditIcon>
                     </Link>
                     <DeleteOutlineIcon className="productListDelete" onClick={()=>handleDelete(params.row._id)}></DeleteOutlineIcon>
                     </>

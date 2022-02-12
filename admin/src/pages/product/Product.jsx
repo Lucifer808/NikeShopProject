@@ -104,6 +104,7 @@ function Product() {
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             const productUpdated = {...inputs, img: downloadURL, categories: cate, size: size, color: color};
             updateProduct(productId,productUpdated, dispatch);
+            alert("Cập nhật mặt hàng thành công");
             window.location.replace('http://localhost:3000/products');
             });
         }
@@ -122,7 +123,7 @@ function Product() {
     return (
         <div className="product">
             <div className="productTitleContainer">
-                <h1 className="productTitle">Sản phẩm</h1>
+                <h1 className="productTitle">Cập nhật sản phẩm</h1>
                 <Link to="/newproduct">
                     <button className="productAddButton">Thêm mới</button>
                 </Link>
@@ -142,12 +143,12 @@ function Product() {
                             <span className="productInfoKey">{product._id}</span>
                         </div>
                         <div className="productInfoItem">
-                            <span className="productInfoKey">Số lượng đã bán: </span>
-                            <span className="productInfoKey">1236</span>
-                        </div>
-                        <div className="productInfoItem">
                             <span className="productInfoKey">Tồn kho: </span>
                             <span className="productInfoKey">{product.inStock === true ? 'Còn hàng' : 'Hết hàng'}</span>
+                        </div>
+                        <div className="productInfoItem">
+                            <span className="productInfoKey">Số lượng đã bán: </span>
+                            <span className="productInfoKey">12</span>
                         </div>
                     </div>
                 </div>
@@ -171,7 +172,6 @@ function Product() {
                             placeholder={product.desc}
                             style={{ width: 250, marginBottom: '10px' }}
                             onChange={handleChange}
-                            required
                         />
                         <label>Giá sản phẩm:</label>
                         <input 
@@ -179,7 +179,6 @@ function Product() {
                             name="price" 
                             placeholder={product.price}
                             onChange={handleChange}
-                            required
                         />
                         <label>Màu sản phẩm:</label>
                         <input 
@@ -187,7 +186,6 @@ function Product() {
                             name="color" 
                             placeholder={product.color}
                             onChange={handleColor}
-                            required
                         />
                         <label>Kích cỡ sản phẩm:</label>
                         <input 
@@ -195,7 +193,6 @@ function Product() {
                             name="size" 
                             placeholder={product.size}
                             onChange={handleSize}
-                            required
                         />
                         <label>Phân loại sản phẩm:</label>
                         <input 
@@ -203,7 +200,13 @@ function Product() {
                             name="cate" 
                             placeholder={product.categories}
                             onChange={handleCate}
-                            required
+                        />
+                        <label>Số lượng:</label>
+                        <input 
+                            type="number" 
+                            name="productQuantity" 
+                            placeholder={product.productQuantity}
+                            onChange={handleChange}
                         />
                         <label>Tồn kho:</label>
                         <select name="inStock" id="idStock" onChange={handleChange}>

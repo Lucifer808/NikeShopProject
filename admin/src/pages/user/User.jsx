@@ -23,6 +23,7 @@ function User() {
     const handleUpdate = (e) => {
         e.preventDefault();
         updateUserData(userId, inputs, dispatch);
+        alert("Cập nhật thông tin thành công");
         window.location.replace('http://localhost:3000/users');
     }
     return (

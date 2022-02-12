@@ -4,6 +4,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { Link } from "react-router-dom";
 import { getUsersData, deleteUsersData } from '../../redux/apiCalls';
 import { useDispatch, useSelector } from 'react-redux';
+import EditIcon from '@mui/icons-material/Edit';
 import "./userList.css";
 function UserList() {
     const dispatch = useDispatch();
@@ -33,7 +34,7 @@ function UserList() {
                 return (
                     <>
                     <Link to={"/user/" + params.row._id}>
-                    <button className="userListEdit">Edit</button>
+                    <EditIcon className="userListEdit"></EditIcon>
                     </Link>
                     <DeleteOutlineIcon className="userListDelete" onClick={()=>handleDelete(params.row._id)}></DeleteOutlineIcon>
                     </>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { getProducts, deleteProduct } from '../../redux/apiCalls'
 import './productList.css'
 import { useDispatch, useSelector } from 'react-redux';
+import EditIcon from '@mui/icons-material/Edit';
 function ProductList() {
     const dispatch = useDispatch();
     const products = useSelector((state) => state.product.products)
@@ -39,7 +40,7 @@ function ProductList() {
                  return (
                      <>
                      <Link to={"/product/" + params.row._id}>
-                     <button className="productListEdit">Edit</button>
+                     <EditIcon className="productListEdit"></EditIcon>
                      </Link>
                      <DeleteOutlineIcon className="productListDelete" onClick={()=>handleDelete(params.row._id)}></DeleteOutlineIcon>
                      </>

@@ -106,10 +106,11 @@ function NewProduct() {
                 </div>
                 <div className="addProductItem">
                     <label htmlFor="">Phân loại sản phẩm: </label>
-                    <input 
-                    type="text" 
-                    placeholder="Vd: t-shirt, men" 
-                    onChange={handleCate}/>
+                    <select onChange={handleChange} name="categories">
+                        <option selected disabled>-- Chọn --</option>
+                        <option value="true">Áo thun</option>
+                        <option value="false">Quần thể thao</option>
+                    </select>
                 </div>
                 <div className="addProductItem">
                     <label htmlFor="">Màu sản phẩm: </label>
@@ -124,6 +125,14 @@ function NewProduct() {
                     type="text" 
                     placeholder="Vd: XL, L" 
                     onChange={handleSize}/>
+                </div>
+                <div className="addProductItem">
+                    <label htmlFor="">Số lượng: </label>
+                    <input 
+                    name="productQuantity" 
+                    type="number" 
+                    placeholder="Vd: 20" 
+                    onChange={handleChange}/>
                 </div>
                 <div className="addProductItem">
                     <label htmlFor="">Tồn kho: </label>
